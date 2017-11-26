@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Pleotonic Engineering</title>
+    <link>pleonex.github.io/post/</link>
+    <description>Recent content in Posts on Pleotonic Engineering</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Benito Palacios Sánchez</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0100</lastBuildDate>
+    <atom:link href="pleonex.github.io/post/" rel="self" type="application/rss+xml" />
+    
+  </channel>
+</rss>

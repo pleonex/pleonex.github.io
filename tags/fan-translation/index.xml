@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fan-translation on Pleotonic Engineering</title>
+    <link>pleonex.github.io/tags/fan-translation/</link>
+    <description>Recent content in fan-translation on Pleotonic Engineering</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Benito Palacios Sánchez</copyright>
+    <lastBuildDate>Sun, 04 Nov 2018 02:01:00 +0100</lastBuildDate>
+    
+	<atom:link href="pleonex.github.io/tags/fan-translation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ni no kuni: El mago de las tinieblas</title>
+      <link>pleonex.github.io/project/ninokuni/</link>
+      <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
+      
+      <guid>pleonex.github.io/project/ninokuni/</guid>
+      <description>Website link modime repo</description>
+    </item>
+    
+    <item>
+      <title>Xenosaga I</title>
+      <link>pleonex.github.io/project/xenosagai/</link>
+      <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
+      
+      <guid>pleonex.github.io/project/xenosagai/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

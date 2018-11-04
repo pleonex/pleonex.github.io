@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Pleotonic Engineering</title>
+    <link>pleonex.github.io/tags/</link>
+    <description>Recent content in Tags on Pleotonic Engineering</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Benito Palacios Sánchez</copyright>
+    
+	<atom:link href="pleonex.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>electronic</title>
+      <link>pleonex.github.io/tags/electronic/</link>
+      <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
+      
+      <guid>pleonex.github.io/tags/electronic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fan-translation</title>
+      <link>pleonex.github.io/tags/fan-translation/</link>
+      <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
+      
+      <guid>pleonex.github.io/tags/fan-translation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reverse-engineering</title>
+      <link>pleonex.github.io/tags/reverse-engineering/</link>
+      <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
+      
+      <guid>pleonex.github.io/tags/reverse-engineering/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

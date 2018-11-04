@@ -2,6 +2,101 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
+    <url>
+    
+      <loc>pleonex.github.io/project/airorom/</loc>
+      <lastmod>2018-11-04T02:01:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>pleonex.github.io/project/tech-challenge/</loc>
+      <lastmod>2018-11-04T02:01:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>pleonex.github.io/project/ninokuni/</loc>
+      <lastmod>2018-11-04T02:01:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>pleonex.github.io/project/tinke/</loc>
+      <lastmod>2018-11-04T02:01:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>pleonex.github.io/project/robotic-arm/</loc>
+      <lastmod>2018-11-04T02:01:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>pleonex.github.io/project/xenosagai/</loc>
+      <lastmod>2018-11-04T02:01:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>pleonex.github.io/project/yarhl/</loc>
+      <lastmod>2018-11-04T02:01:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>pleonex.github.io/talk/game-sec-jasyp18/</loc>
+      <lastmod>2018-11-01T18:00:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>pleonex.github.io/talk/pokemon-mystery-devfestjaen18/</loc>
+      <lastmod>2018-11-01T18:00:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>pleonex.github.io/talk/iiot-dds/</loc>
+      <lastmod>2018-11-01T18:00:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>pleonex.github.io/talk/rh01-texts/</loc>
+      <lastmod>2018-11-01T18:00:00+01:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>pleonex.github.io/talk/rh02-imgs/</loc>
+      <lastmod>2018-11-01T18:00:00+01:00</lastmod>
+    </url>
+    
+  
     
     <url>
     
@@ -11,7 +106,6 @@
     
   
     
-    
     <url>
     
       <loc>pleonex.github.io/post/</loc>
@@ -20,7 +114,6 @@
     
   
     
-    
     <url>
     
       <loc>pleonex.github.io/categories/</loc>
@@ -28,7 +121,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -39,6 +131,14 @@
     
   
     
+    <url>
+    
+      <loc>pleonex.github.io/project/</loc>
+      <lastmod>2018-11-04T02:01:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
     
     <url>
     
@@ -48,10 +148,36 @@
     
   
     
-    
     <url>
     
       <loc>pleonex.github.io/tags/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>pleonex.github.io/tags/electronic/</loc>
+      <lastmod>2018-11-04T02:01:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>pleonex.github.io/tags/fan-translation/</loc>
+      <lastmod>2018-11-04T02:01:00+01:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>pleonex.github.io/tags/reverse-engineering/</loc>
+      <lastmod>2018-11-04T02:01:00+01:00</lastmod>
       <priority>0</priority>
     </url>
     

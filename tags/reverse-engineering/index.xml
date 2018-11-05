@@ -18,7 +18,8 @@
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
       <guid>/project/airorom/</guid>
-      <description>repo</description>
+      <description>Data Protection Mechanisms in Video Games Electrical Engineering Bachelor dissertation. I researched different video games of Nintendo DS to find out how they were protecting different sensitive content like text, video and audio to avoid modifications and/or access. I documented the different algorithms, their weakness and several recommendations to improve the protection.
+ Project code name: AiroRom. Report PDF Presentation Slides Source code Wiki with temporal results.  Abstract Video games are getting one of the most important elements of our culture.</description>
     </item>
     
     <item>
@@ -37,15 +38,6 @@
       
       <guid>/project/tinke/</guid>
       <description>Website link</description>
-    </item>
-    
-    <item>
-      <title>Xenosaga I</title>
-      <link>/project/xenosagai/</link>
-      <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
-      
-      <guid>/project/xenosagai/</guid>
-      <description></description>
     </item>
     
     <item>

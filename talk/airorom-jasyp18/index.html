@@ -15,10 +15,15 @@
   
     
   
-  <meta name="description" content="Charla sobre Industrial Internet of Things (IIoT) y sus principales protocolos de comunicación. Se explicará como estas tecnologías se están aplicando a industrias como de vehículos autónomos, energías renovables y hospitales inteligentes; y se profundizará en el estándar DDS mostrando como desarrollar aplicaciones basadas en él.">
+  <meta name="description" content="El ROM Hacking, ingeniería inversa en videojuegos, es un tema que cada vez más estudios de videojuegos dedican recursos para evitar.
+
+El objetivo: proteger los textos para evitar fan-traducciones, los sprites para que sean reutilizados en otros juegos, los mapas para que se hagan mods o las comunicaciones inalámbricas para hacer trampas.
+
+Se ofrecerá un resumen de la situación actual y de los algoritmos descubiertos (así como del procedimiento) en algunos videojuegos conocidos.
+">
 
   
-  <link rel="alternate" hreflang="en-us" href="/talk/iiot-dds/">
+  <link rel="alternate" hreflang="en-us" href="/talk/airorom-jasyp18/">
 
   
 
@@ -84,7 +89,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/talk/iiot-dds/">
+  <link rel="canonical" href="/talk/airorom-jasyp18/">
 
   <meta property="twitter:card" content="summary_large_image">
   
@@ -92,18 +97,23 @@
   <meta property="twitter:creator" content="@pleonex">
   
   <meta property="og:site_name" content="Pleotonic Engineering">
-  <meta property="og:url" content="/talk/iiot-dds/">
-  <meta property="og:title" content="Protocolos del Industrial IoT | Pleotonic Engineering">
-  <meta property="og:description" content="Charla sobre Industrial Internet of Things (IIoT) y sus principales protocolos de comunicación. Se explicará como estas tecnologías se están aplicando a industrias como de vehículos autónomos, energías renovables y hospitales inteligentes; y se profundizará en el estándar DDS mostrando como desarrollar aplicaciones basadas en él.">
+  <meta property="og:url" content="/talk/airorom-jasyp18/">
+  <meta property="og:title" content="Destripando juegos: protecciones anti ROM Hacking | Pleotonic Engineering">
+  <meta property="og:description" content="El ROM Hacking, ingeniería inversa en videojuegos, es un tema que cada vez más estudios de videojuegos dedican recursos para evitar.
+
+El objetivo: proteger los textos para evitar fan-traducciones, los sprites para que sean reutilizados en otros juegos, los mapas para que se hagan mods o las comunicaciones inalámbricas para hacer trampas.
+
+Se ofrecerá un resumen de la situación actual y de los algoritmos descubiertos (así como del procedimiento) en algunos videojuegos conocidos.
+">
   
   
     
   <meta property="og:image" content="/img/icon-192.png">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2018-11-01T18:00:00&#43;01:00">
+  <meta property="article:published_time" content="2018-11-05T02:00:00&#43;01:00">
   
-  <meta property="article:modified_time" content="2018-11-01T18:00:00&#43;01:00">
+  <meta property="article:modified_time" content="2018-11-05T02:00:00&#43;01:00">
   
 
   
@@ -136,7 +146,7 @@
 
   
 
-  <title>Protocolos del Industrial IoT | Pleotonic Engineering</title>
+  <title>Destripando juegos: protecciones anti ROM Hacking | Pleotonic Engineering</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" class="dark">
@@ -322,8 +332,8 @@
 
 
 <div class="article-header d-xl-none">
-  <img src="/talk/iiot-dds/featured_hu4360aa956424287ff5c980d7695ebe97_70537_1600x400_fill_q90_box_smart1.jpg" class="article-banner" itemprop="image" alt="">
-  
+  <img src="/talk/airorom-jasyp18/featured_hu7b3f94af1269500360d877d6df90f302_111748_1600x400_fill_q90_box_center_2.png" class="article-banner" itemprop="image" alt="">
+  <span class="article-header-caption">Text hack in Super Mario 64 DS</span>
 </div>
 
 
@@ -331,7 +341,7 @@
   <div class="row">
     <div class="col-6">
       <div class="split-header-content">
-        <h1 itemprop="name">Protocolos del Industrial IoT</h1>
+        <h1 itemprop="name">Destripando juegos: protecciones anti ROM Hacking</h1>
 
         
 
@@ -348,9 +358,9 @@
 
   <span class="article-date">
     
-    <meta content="2018-11-01 18:00:00 &#43;0100 CET" itemprop="datePublished">
-    <time datetime="2018-11-01 18:00:00 &#43;0100 CET" itemprop="dateModified">
-      Nov 1, 2018
+    <meta content="2018-11-05 02:00:00 &#43;0100 CET" itemprop="datePublished">
+    <time datetime="2018-11-05 02:00:00 &#43;0100 CET" itemprop="dateModified">
+      Nov 5, 2018
     </time>
   </span>
   <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
@@ -374,35 +384,35 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Protocolos%20del%20Industrial%20IoT&amp;url=%2ftalk%2fiiot-dds%2f"
+         href="https://twitter.com/intent/tweet?text=Destripando%20juegos%3a%20protecciones%20anti%20ROM%20Hacking&amp;url=%2ftalk%2fairorom-jasyp18%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=%2ftalk%2fiiot-dds%2f"
+         href="https://www.facebook.com/sharer.php?u=%2ftalk%2fairorom-jasyp18%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2ftalk%2fiiot-dds%2f&amp;title=Protocolos%20del%20Industrial%20IoT"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2ftalk%2fairorom-jasyp18%2f&amp;title=Destripando%20juegos%3a%20protecciones%20anti%20ROM%20Hacking"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2ftalk%2fiiot-dds%2f&amp;title=Protocolos%20del%20Industrial%20IoT"
+         href="http://service.weibo.com/share/share.php?url=%2ftalk%2fairorom-jasyp18%2f&amp;title=Destripando%20juegos%3a%20protecciones%20anti%20ROM%20Hacking"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Protocolos%20del%20Industrial%20IoT&amp;body=%2ftalk%2fiiot-dds%2f">
+         href="mailto:?subject=Destripando%20juegos%3a%20protecciones%20anti%20ROM%20Hacking&amp;body=%2ftalk%2fairorom-jasyp18%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -414,15 +424,15 @@
     </div>
     <div class="col-6">
       <div class="split-header-image">
-        <img src="/talk/iiot-dds/featured_hu4360aa956424287ff5c980d7695ebe97_70537_680x500_fill_q90_box_smart1.jpg" itemprop="image" alt="">
-        
+        <img src="/talk/airorom-jasyp18/featured_hu7b3f94af1269500360d877d6df90f302_111748_680x500_fill_q90_box_center_2.png" itemprop="image" alt="">
+        <span class="article-header-caption">Text hack in Super Mario 64 DS</span>
       </div>
     </div>
   </div>
 </div>
 
 <div class="article-container d-xl-none">
-  <h1 itemprop="name">Protocolos del Industrial IoT</h1>
+  <h1 itemprop="name">Destripando juegos: protecciones anti ROM Hacking</h1>
 
   
 
@@ -439,9 +449,9 @@
 
   <span class="article-date">
     
-    <meta content="2018-11-01 18:00:00 &#43;0100 CET" itemprop="datePublished">
-    <time datetime="2018-11-01 18:00:00 &#43;0100 CET" itemprop="dateModified">
-      Nov 1, 2018
+    <meta content="2018-11-05 02:00:00 &#43;0100 CET" itemprop="datePublished">
+    <time datetime="2018-11-05 02:00:00 &#43;0100 CET" itemprop="dateModified">
+      Nov 5, 2018
     </time>
   </span>
   <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
@@ -461,35 +471,35 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Protocolos%20del%20Industrial%20IoT&amp;url=%2ftalk%2fiiot-dds%2f"
+         href="https://twitter.com/intent/tweet?text=Destripando%20juegos%3a%20protecciones%20anti%20ROM%20Hacking&amp;url=%2ftalk%2fairorom-jasyp18%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=%2ftalk%2fiiot-dds%2f"
+         href="https://www.facebook.com/sharer.php?u=%2ftalk%2fairorom-jasyp18%2f"
          target="_blank" rel="noopener">
         <i class="fab fa-facebook-f"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2ftalk%2fiiot-dds%2f&amp;title=Protocolos%20del%20Industrial%20IoT"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2ftalk%2fairorom-jasyp18%2f&amp;title=Destripando%20juegos%3a%20protecciones%20anti%20ROM%20Hacking"
          target="_blank" rel="noopener">
         <i class="fab fa-linkedin-in"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2ftalk%2fiiot-dds%2f&amp;title=Protocolos%20del%20Industrial%20IoT"
+         href="http://service.weibo.com/share/share.php?url=%2ftalk%2fairorom-jasyp18%2f&amp;title=Destripando%20juegos%3a%20protecciones%20anti%20ROM%20Hacking"
          target="_blank" rel="noopener">
         <i class="fab fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Protocolos%20del%20Industrial%20IoT&amp;body=%2ftalk%2fiiot-dds%2f">
+         href="mailto:?subject=Destripando%20juegos%3a%20protecciones%20anti%20ROM%20Hacking&amp;body=%2ftalk%2fairorom-jasyp18%2f">
         <i class="fas fa-envelope"></i>
       </a>
     </li>
@@ -509,7 +519,12 @@
 
     
       <h3>Abstract</h3>
-      <p class="pub-abstract" itemprop="text">Charla sobre Industrial Internet of Things (IIoT) y sus principales protocolos de comunicación. Se explicará como estas tecnologías se están aplicando a industrias como de vehículos autónomos, energías renovables y hospitales inteligentes; y se profundizará en el estándar DDS mostrando como desarrollar aplicaciones basadas en él.</p>
+      <p class="pub-abstract" itemprop="text"><p>El ROM Hacking, ingeniería inversa en videojuegos, es un tema que cada vez más estudios de videojuegos dedican recursos para evitar.</p>
+
+<p>El objetivo: proteger los textos para evitar fan-traducciones, los sprites para que sean reutilizados en otros juegos, los mapas para que se hagan mods o las comunicaciones inalámbricas para hacer trampas.</p>
+
+<p>Se ofrecerá un resumen de la situación actual y de los algoritmos descubiertos (así como del procedimiento) en algunos videojuegos conocidos.</p>
+</p>
     
 
     <div class="row">
@@ -519,12 +534,12 @@
           <div class="col-12 col-md-3 pub-row-heading">Date</div>
           <div class="col-12 col-md-9" itemprop="datePublished">
             
-            May 12, 2017
+            Apr 13, 2018
             <div class="talk-time">
               
-                9:00 AM
+                6:15 PM
                 
-                  &mdash; 10:30 AM
+                  &mdash; 7:00 PM
                 
               
             </div>
@@ -541,8 +556,8 @@
         <div class="row">
           <div class="col-12 col-md-3 pub-row-heading">Event</div>
           <div class="col-12 col-md-9">
-            <a href="http://umh.ieeespain.org/developer-days-2017/" target="_blank" rel="noopener">
-            IEEE Developer Days
+            <a href="https://interferencias.tech/jasyp/" target="_blank" rel="noopener">
+            JASyP&rsquo;18
             </a>
           </div>
         </div>
@@ -557,7 +572,7 @@
       <div class="col-md-10">
         <div class="row">
           <div class="col-12 col-md-3 pub-row-heading">Location</div>
-          <div class="col-12 col-md-9">Elche, Spain</div>
+          <div class="col-12 col-md-9">Granada, Spain</div>
         </div>
       </div>
       <div class="col-md-1"></div>
@@ -566,14 +581,62 @@
     
 
     
+    <div class="row" style="padding-top: 10px">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading" style="line-height:34px;">Links</div>
+          <div class="col-12 col-md-9">
+
+            
+
+
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="https://es.slideshare.net/pleonex/jasyp2018-destripando-juegos-protecciones-anti-rom-hacking" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="https://docs.google.com/presentation/d/1YJD3L5t3HrueVCY0PTO0wIsa62Khw0BdrDTinjoDiBU/edit?usp=sharing" target="_blank">
+  Slides
+</a>
+
+
+
+
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/project/airorom/">
+    Project
+  </a>
+  
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+    
 
     <div class="space-below"></div>
 
     <div class="article-style">
-      <p>Talk at the IEEE Developer Days organized by the association IEEE Student Branch
-of Elche. I talked about the Industrial Internet of Things (IIoT) and the main
-network protocols and framework in the market. I gave details on how one of
-them, DDS, works with a demo.</p>
+      <p>Talk at the JASyP (<em>Jornadas de Anonimato, Seguridad y Privacidad</em>). Organized
+by the group <em>Interferencias</em> in the University of Granada. I talked about
+the security mechanisms like encryption that we can find inside of the
+video-games with the goal to obfuscate their files to avoid hacks, mods and
+fan-translations.</p>
+
+<div class="responsive-wrap">
+  <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS7HprP3NFHWYFv24rmLSHUIduameDSFBIVQFVq29Rbi2GZJGAbKv3eTpBk2fuDsJ_EelwaXVScYS0H/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
 
     </div>
 

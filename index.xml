@@ -2,30 +2,90 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pleotonic Engineering on Pleotonic Engineering</title>
-    <link>pleonex.github.io/</link>
+    <link>/</link>
     <description>Recent content in Pleotonic Engineering on Pleotonic Engineering</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Benito Palacios Sánchez</copyright>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 +0200</lastBuildDate>
-    <atom:link href="pleonex.github.io/" rel="self" type="application/rss+xml" />
+    <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Destripando juegos: protecciones anti ROM Hacking</title>
+      <link>/talk/airorom-jasyp18/</link>
+      <pubDate>Mon, 05 Nov 2018 02:00:00 +0100</pubDate>
+      
+      <guid>/talk/airorom-jasyp18/</guid>
+      <description>&lt;p&gt;Talk at the JASyP (&lt;em&gt;Jornadas de Anonimato, Seguridad y Privacidad&lt;/em&gt;). Organized
+by the group &lt;em&gt;Interferencias&lt;/em&gt; in the University of Granada. I talked about
+the security mechanisms like encryption that we can find inside of the
+video-games with the goal to obfuscate their files to avoid hacks, mods and
+fan-translations.&lt;/p&gt;
+
+&lt;div class=&#34;responsive-wrap&#34;&gt;
+  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vS7HprP3NFHWYFv24rmLSHUIduameDSFBIVQFVq29Rbi2GZJGAbKv3eTpBk2fuDsJ_EelwaXVScYS0H/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ROM Hacking Level 01: Textos</title>
+      <link>/talk/rh01-texts/</link>
+      <pubDate>Mon, 05 Nov 2018 02:00:00 +0100</pubDate>
+      
+      <guid>/talk/rh01-texts/</guid>
+      <description>&lt;p&gt;Live streaming from the virtual reality platform &lt;a href=&#34;https://altvr.com/&#34; target=&#34;_blank&#34;&gt;AltspaceVR&lt;/a&gt;.
+The talk explains different topics and concept related to text formats like
+encodings, tables, fonts and compression.&lt;/p&gt;
+
+&lt;div class=&#34;responsive-wrap&#34;&gt;
+  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vQn2hQWBTgfy_z0oVbfPFrqk9Et2GzZH2n4vdcFpQH4N83hiEYXtm5bIEt5OHgJFy1qRwBjJQTUu9Zw/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ROM Hacking Level 02: Imágenes</title>
+      <link>/talk/rh02-imgs/</link>
+      <pubDate>Mon, 05 Nov 2018 02:00:00 +0100</pubDate>
+      
+      <guid>/talk/rh02-imgs/</guid>
+      <description>&lt;p&gt;Live streaming from Twitch requested by the TraduSquare community.
+This time I talked about the file format of the images, sprites and textures
+in video-games and all the kind of compression and techniques used in the
+Nintendo DS.&lt;/p&gt;
+
+&lt;div class=&#34;responsive-wrap&#34;&gt;
+  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vQHe3_sdr5P-OCpod4__yACYIdtvTxn-8Af6VOVaoylXhxCa8kTRIRDI441GYc247MNvUiAPRl-XTVR/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Following this talk, the next day I did a second live streaming where the people
+choose three games for Nintendo DS and I had to figure out the image formats:&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/6dOo_tv_-3A&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
     
     <item>
       <title>Dissertation</title>
-      <link>pleonex.github.io/project/airorom/</link>
+      <link>/project/airorom/</link>
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
-      <guid>pleonex.github.io/project/airorom/</guid>
+      <guid>/project/airorom/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/pleonex/AiroRom&#34; target=&#34;_blank&#34;&gt;repo&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>IV Tech Challenge</title>
-      <link>pleonex.github.io/project/tech-challenge/</link>
+      <link>/project/tech-challenge/</link>
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
-      <guid>pleonex.github.io/project/tech-challenge/</guid>
+      <guid>/project/tech-challenge/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/Prometheus-ETSIIT/locaviewer&#34; target=&#34;_blank&#34;&gt;Website link&lt;/a&gt;
 &lt;a href=&#34;http://blogs.rti.com/2015/01/20/from-college-students-to-entrepreneurs/&#34; target=&#34;_blank&#34;&gt;blog&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -33,10 +93,10 @@
     
     <item>
       <title>Ni no kuni: El mago de las tinieblas</title>
-      <link>pleonex.github.io/project/ninokuni/</link>
+      <link>/project/ninokuni/</link>
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
-      <guid>pleonex.github.io/project/ninokuni/</guid>
+      <guid>/project/ninokuni/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://gradienwords.tk/ninokuni/info.html&#34; target=&#34;_blank&#34;&gt;Website link&lt;/a&gt;
 &lt;a href=&#34;https://github.com/pleonex/modime&#34; target=&#34;_blank&#34;&gt;modime&lt;/a&gt;
 &lt;a href=&#34;https://github.com/pleonex/Ninokuni&#34; target=&#34;_blank&#34;&gt;repo&lt;/a&gt;&lt;/p&gt;
@@ -45,20 +105,20 @@
     
     <item>
       <title>Tinke</title>
-      <link>pleonex.github.io/project/tinke/</link>
+      <link>/project/tinke/</link>
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
-      <guid>pleonex.github.io/project/tinke/</guid>
+      <guid>/project/tinke/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/pleonex/tinke&#34; target=&#34;_blank&#34;&gt;Website link&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Wall-E: Robotic Arm</title>
-      <link>pleonex.github.io/project/robotic-arm/</link>
+      <link>/project/robotic-arm/</link>
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
-      <guid>pleonex.github.io/project/robotic-arm/</guid>
+      <guid>/project/robotic-arm/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ieeeugrsb/Wall-E&#34; target=&#34;_blank&#34;&gt;Website link&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/pleonex/Arduimmer&#34; target=&#34;_blank&#34;&gt;Programmer&lt;/a&gt;&lt;/p&gt;
@@ -67,96 +127,56 @@
     
     <item>
       <title>Xenosaga I</title>
-      <link>pleonex.github.io/project/xenosagai/</link>
+      <link>/project/xenosagai/</link>
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
-      <guid>pleonex.github.io/project/xenosagai/</guid>
+      <guid>/project/xenosagai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Yarhl</title>
-      <link>pleonex.github.io/project/yarhl/</link>
+      <link>/project/yarhl/</link>
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
-      <guid>pleonex.github.io/project/yarhl/</guid>
+      <guid>/project/yarhl/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/SceneGate/yarhl&#34; target=&#34;_blank&#34;&gt;Website link&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Data protection mechanisms in videogames</title>
-      <link>pleonex.github.io/talk/game-sec-jasyp18/</link>
-      <pubDate>Thu, 01 Nov 2018 18:00:00 +0100</pubDate>
-      
-      <guid>pleonex.github.io/talk/game-sec-jasyp18/</guid>
-      <description>&lt;p&gt;Slides for the event:&lt;/p&gt;
-
-&lt;div class=&#34;responsive-wrap&#34;&gt;
-  &lt;iframe src=&#34;&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>El misterio de las claves de Pokémon Mundo Misterioso</title>
-      <link>pleonex.github.io/talk/pokemon-mystery-devfestjaen18/</link>
+      <link>/talk/pokemon-mystery-devfestjaen18/</link>
       <pubDate>Thu, 01 Nov 2018 18:00:00 +0100</pubDate>
       
-      <guid>pleonex.github.io/talk/pokemon-mystery-devfestjaen18/</guid>
-      <description>&lt;p&gt;Slides for the event:&lt;/p&gt;
-
-&lt;div class=&#34;responsive-wrap&#34;&gt;
-  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vQXQvdFkmg0Qt-4w9XG01Oor1kI9j4-GA_iOlTKy2zudgOa9e-VoR5uBfPLNTY3EzxGjNZcHc4JS16G/embed?start=false&amp;amp;loop=false&amp;amp;delayms=5000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Follow the Twitter thread here! (Spanish)&lt;/p&gt;
+      <guid>/talk/pokemon-mystery-devfestjaen18/</guid>
+      <description>&lt;p&gt;Talk at the DevFest 2018 organized by the GDG Jaén (&lt;em&gt;Google Developer Group&lt;/em&gt;).
+The presentation is about a Twitter thread I did on July. For a week I was
+figuring out how the game &lt;em&gt;Pokémon Mistery Dungeon Explorers of Sky&lt;/em&gt; from
+Nintendo DS generate and validate a kind of password for rescue missions,
+special events and object sharing. It almost a study of the assembly code
+of the game with some notes about the implementation.&lt;/p&gt;
 
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;es&#34; dir=&#34;ltr&#34;&gt;Hoy me he puesto el reto de averiguar cómo funcionan las contraseñas de Pokémon Mundo Misterioso (NDS). Son un montón de caracteres &amp;quot;aleatorios&amp;quot; que puedes compartir para que otras personas te rescaten desde sus juegos. Voy a ir contando lo que averiguo 🔽 &lt;a href=&#34;https://t.co/0ZRz1361Ol&#34;&gt;pic.twitter.com/0ZRz1361Ol&lt;/a&gt;&lt;/p&gt;&amp;mdash; Bentium IV (@pleonex) &lt;a href=&#34;https://twitter.com/pleonex/status/1015933593904992256?ref_src=twsrc%5Etfw&#34;&gt;July 8, 2018&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
-</description>
-    </item>
-    
-    <item>
-      <title>Protocols for the Industrial IoT</title>
-      <link>pleonex.github.io/talk/iiot-dds/</link>
-      <pubDate>Thu, 01 Nov 2018 18:00:00 +0100</pubDate>
-      
-      <guid>pleonex.github.io/talk/iiot-dds/</guid>
-      <description>&lt;p&gt;Slides for the event:&lt;/p&gt;
 
 &lt;div class=&#34;responsive-wrap&#34;&gt;
-  &lt;iframe src=&#34;&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;https://docs.google.com/presentation/d/e/2PACX-1vQXQvdFkmg0Qt-4w9XG01Oor1kI9j4-GA_iOlTKy2zudgOa9e-VoR5uBfPLNTY3EzxGjNZcHc4JS16G/embed?start=false&amp;amp;loop=false&amp;amp;delayms=5000&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
-      <title>ROM Hacking Level 01: Texts</title>
-      <link>pleonex.github.io/talk/rh01-texts/</link>
+      <title>Protocolos del Industrial IoT</title>
+      <link>/talk/iiot-dds/</link>
       <pubDate>Thu, 01 Nov 2018 18:00:00 +0100</pubDate>
       
-      <guid>pleonex.github.io/talk/rh01-texts/</guid>
-      <description>&lt;p&gt;Slides for the event:&lt;/p&gt;
-
-&lt;div class=&#34;responsive-wrap&#34;&gt;
-  &lt;iframe src=&#34;&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>ROM Hacking Level 02: Images</title>
-      <link>pleonex.github.io/talk/rh02-imgs/</link>
-      <pubDate>Thu, 01 Nov 2018 18:00:00 +0100</pubDate>
-      
-      <guid>pleonex.github.io/talk/rh02-imgs/</guid>
-      <description>&lt;p&gt;Slides for the event:&lt;/p&gt;
-
-&lt;div class=&#34;responsive-wrap&#34;&gt;
-  &lt;iframe src=&#34;&#34; frameborder=&#34;0&#34; width=&#34;960&#34; height=&#34;569&#34; allowfullscreen=&#34;true&#34; mozallowfullscreen=&#34;true&#34; webkitallowfullscreen=&#34;true&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
+      <guid>/talk/iiot-dds/</guid>
+      <description>&lt;p&gt;Talk at the IEEE Developer Days organized by the association IEEE Student Branch
+of Elche. I talked about the Industrial Internet of Things (IIoT) and the main
+network protocols and framework in the market. I gave details on how one of
+them, DDS, works with a demo.&lt;/p&gt;
 </description>
     </item>
     

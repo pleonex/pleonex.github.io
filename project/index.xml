@@ -2,77 +2,77 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Pleotonic Engineering</title>
-    <link>pleonex.github.io/project/</link>
+    <link>/project/</link>
     <description>Recent content in Projects on Pleotonic Engineering</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Benito Palacios Sánchez</copyright>
     <lastBuildDate>Sun, 04 Nov 2018 02:01:00 +0100</lastBuildDate>
     
-	<atom:link href="pleonex.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Dissertation</title>
-      <link>pleonex.github.io/project/airorom/</link>
+      <link>/project/airorom/</link>
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
-      <guid>pleonex.github.io/project/airorom/</guid>
+      <guid>/project/airorom/</guid>
       <description>repo</description>
     </item>
     
     <item>
       <title>IV Tech Challenge</title>
-      <link>pleonex.github.io/project/tech-challenge/</link>
+      <link>/project/tech-challenge/</link>
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
-      <guid>pleonex.github.io/project/tech-challenge/</guid>
+      <guid>/project/tech-challenge/</guid>
       <description>Website link blog</description>
     </item>
     
     <item>
       <title>Ni no kuni: El mago de las tinieblas</title>
-      <link>pleonex.github.io/project/ninokuni/</link>
+      <link>/project/ninokuni/</link>
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
-      <guid>pleonex.github.io/project/ninokuni/</guid>
+      <guid>/project/ninokuni/</guid>
       <description>Website link modime repo</description>
     </item>
     
     <item>
       <title>Tinke</title>
-      <link>pleonex.github.io/project/tinke/</link>
+      <link>/project/tinke/</link>
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
-      <guid>pleonex.github.io/project/tinke/</guid>
+      <guid>/project/tinke/</guid>
       <description>Website link</description>
     </item>
     
     <item>
       <title>Wall-E: Robotic Arm</title>
-      <link>pleonex.github.io/project/robotic-arm/</link>
+      <link>/project/robotic-arm/</link>
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
-      <guid>pleonex.github.io/project/robotic-arm/</guid>
+      <guid>/project/robotic-arm/</guid>
       <description>Website link
 Programmer</description>
     </item>
     
     <item>
       <title>Xenosaga I</title>
-      <link>pleonex.github.io/project/xenosagai/</link>
+      <link>/project/xenosagai/</link>
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
-      <guid>pleonex.github.io/project/xenosagai/</guid>
+      <guid>/project/xenosagai/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Yarhl</title>
-      <link>pleonex.github.io/project/yarhl/</link>
+      <link>/project/yarhl/</link>
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
-      <guid>pleonex.github.io/project/yarhl/</guid>
+      <guid>/project/yarhl/</guid>
       <description>Website link</description>
     </item>
     

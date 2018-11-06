@@ -18,8 +18,9 @@
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
       <guid>/project/airorom/</guid>
-      <description>Data Protection Mechanisms in Video Games Electrical Engineering Bachelor dissertation. I researched different video games of Nintendo DS to find out how they were protecting different sensitive content like text, video and audio to avoid modifications and/or access. I documented the different algorithms, their weakness and several recommendations to improve the protection.
- Project code name: AiroRom. Report PDF Presentation Slides Source code Wiki with temporal results.  Abstract Video games are getting one of the most important elements of our culture.</description>
+      <description>Data Protection Mechanisms in Video Games Grade: 9.9 / 10
+ Electrical Engineering Bachelor dissertation. I researched different video games of Nintendo DS to find out how they were protecting different sensitive content like text, video and audio to avoid modifications and/or access. I documented the different algorithms, their weakness and several recommendations to improve the protection.
+ Project code name: AiroRom. Report PDF Presentation Slides Source code Wiki with temporal results.</description>
     </item>
     
     <item>
@@ -28,7 +29,8 @@
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
       <guid>/project/tech-challenge/</guid>
-      <description>Three friends and me formed a group named Prometheus and participated in an event organized by our university: University of Granada. We participated in the four edition of the so called Tech Challenge. It was sponsored by the company RTI who proposed the topic of the challenge: &amp;ldquo;create a distributed video system&amp;rdquo;. The goal was to simulate a start-up and create from scratch a prototype ready to go to the market.</description>
+      <description>Our team won the challenge!
+ As part of a group of four students named Prometheus, we participated in an event organized by our university: University of Granada. We participated in the four edition of the so called Tech Challenge. It was sponsored by the company RTI who proposed the topic of the challenge: &amp;ldquo;create a distributed video system&amp;rdquo;. The goal was to simulate a start-up and create from scratch a prototype ready to go to the market.</description>
     </item>
     
     <item>
@@ -37,7 +39,8 @@
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
       <guid>/project/ninokuni/</guid>
-      <description>Website link modime repo</description>
+      <description>As a member of the GradienWords fan-translation group, I worked in my free time as Localization Engineer to translate from Japaese to Spanish the game: &amp;ldquo;Ni no kuni: Shikkoku no Madoshi&amp;rdquo; for Nintendo DS. In this altruistic project we did reverse engineering in the game to translate all the text and images files as well as edit font files and assembly code.
+     Programming:  Create programs to convert text, image, audio and font files in easy formats to edit like XML, TXT, PO, PNG, WAV files.</description>
     </item>
     
     <item>
@@ -46,17 +49,9 @@
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
       <guid>/project/tinke/</guid>
-      <description>Website link</description>
-    </item>
-    
-    <item>
-      <title>Wall-E: Robotic Arm</title>
-      <link>/project/robotic-arm/</link>
-      <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
-      
-      <guid>/project/robotic-arm/</guid>
-      <description>Website link
-Programmer</description>
+      <description>Deprecated program. Superseded by Yarhl
+Don&amp;rsquo;t judge the code, I wrote the whole program while learning programming 😄
+    Source code Forum     GitHub GBATemp    Tinke is a program to see, convert, and edit the files of NDS games. You can see a lot of format files like images, text, sounds, fonts and textures. Furthermore it works with plugins made in NET Framework languages (C# and VB.</description>
     </item>
     
     <item>
@@ -65,7 +60,8 @@ Programmer</description>
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
       <guid>/project/yarhl/</guid>
-      <description>Website link</description>
+      <description>   Website Source code Documentation     Here GitHub Here    Yarhl is a library for ROM Hacking and fan-translation projects. It provides a virtual file system, file format and format conversion features and plugin support. It&amp;rsquo;s built in C# / .NET and works in Windows, Linux and Mac OS X.
+    Linux &amp;amp; Mac OS X Windows     Build &amp;amp; Test                 Quality report    Coverage    Quality Reports    Quality Details       Code Stats     </description>
     </item>
     
   </channel>

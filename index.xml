@@ -80,6 +80,12 @@ choose three games for Nintendo DS and I had to figure out the image formats:&lt
 
 &lt;h1 id=&#34;data-protection-mechanisms-in-video-games&#34;&gt;Data Protection Mechanisms in Video Games&lt;/h1&gt;
 
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;Grade: 9.9 / 10&lt;/p&gt;
+
+&lt;/div&gt;
+
+
 &lt;p&gt;Electrical Engineering Bachelor dissertation.
 I researched different video games of Nintendo DS to find out how they were
 protecting different sensitive content like text, video and audio to avoid
@@ -135,13 +141,47 @@ About the online services, it will show how bad protocol designs has been found,
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
       <guid>/project/tech-challenge/</guid>
-      <description>&lt;p&gt;Three friends and me formed a group named &lt;em&gt;Prometheus&lt;/em&gt; and participated in an
+      <description>
+
+
+
+
+&lt;figure&gt;
+
+&lt;img src=&#34;logo.png&#34; /&gt;
+
+
+&lt;/figure&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;Our team won the challenge!&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;p&gt;As part of a group of four students named &lt;em&gt;Prometheus&lt;/em&gt;, we participated in an
 event organized by our university: University of Granada. We participated in the
 four edition of the so called &lt;em&gt;Tech Challenge&lt;/em&gt;. It was sponsored by the company
 RTI who proposed the topic of the challenge: &lt;em&gt;&amp;ldquo;create a distributed video
 system&amp;rdquo;&lt;/em&gt;. The goal was to simulate a start-up and create from scratch a
 prototype ready to go to the market. We did a market research, study of prices
 and present a full proposal with a working prototype.&lt;/p&gt;
+
+
+
+
+&lt;figure&gt;
+
+&lt;img src=&#34;locaviewer_ui1.png&#34; /&gt;
+
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  &lt;h4&gt;Locaviewer application&lt;/h4&gt;
+  
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
 
 &lt;p&gt;Our proposal was a video-system for kindergartens. The objective was that
 parents could get a clear image of their baby only. For that, we tracked the
@@ -151,11 +191,23 @@ to select the camera that had the best video for that person and stream only
 that video. To send and receive the sensor data and video we use the distributed
 protocol DDS with the implementation of RTI Connext DDS.&lt;/p&gt;
 
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;p&gt;Our team won the challenge!&lt;/p&gt;
 
-&lt;/div&gt;
 
+
+&lt;figure&gt;
+
+&lt;img src=&#34;dds.png&#34; /&gt;
+
+
+
+&lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; &gt;
+  &lt;h4&gt;DDS design&lt;/h4&gt;
+  
+&lt;/figcaption&gt;
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;more-information&#34;&gt;More information&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://blogs.rti.com/2015/01/20/from-college-students-to-entrepreneurs/&#34; target=&#34;_blank&#34;&gt;English blog post&lt;/a&gt; about the experience.&lt;/li&gt;
@@ -171,9 +223,117 @@ protocol DDS with the implementation of RTI Connext DDS.&lt;/p&gt;
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
       <guid>/project/ninokuni/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://gradienwords.tk/ninokuni/info.html&#34; target=&#34;_blank&#34;&gt;Website link&lt;/a&gt;
-&lt;a href=&#34;https://github.com/pleonex/modime&#34; target=&#34;_blank&#34;&gt;modime&lt;/a&gt;
-&lt;a href=&#34;https://github.com/pleonex/Ninokuni&#34; target=&#34;_blank&#34;&gt;repo&lt;/a&gt;&lt;/p&gt;
+      <description>
+
+
+
+
+&lt;figure&gt;
+
+&lt;img src=&#34;logo.png&#34; /&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;As a member of the GradienWords fan-translation group, I worked in my free time
+as Localization Engineer to translate from Japaese to Spanish the game:
+&lt;em&gt;&amp;ldquo;Ni no kuni: Shikkoku no Madoshi&amp;rdquo;&lt;/em&gt; for Nintendo DS.
+In this altruistic project we did reverse engineering in the game to translate
+all the text and images files as well as edit font files and assembly code.&lt;/p&gt;
+
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+  
+  
+  
+  
+    
+      
+    
+  
+  &lt;a data-fancybox=&#34;gallery-screenshots&#34; data-caption=&#34;Battle system&#34; href=&#34;/img/nino/battle.png&#34;&gt;
+    &lt;img alt=&#34;&#34; src=&#34;/img/nino/battle.png&#34;&gt;
+  &lt;/a&gt;
+  
+  
+  
+  
+    
+      
+    
+  
+  &lt;a data-fancybox=&#34;gallery-screenshots&#34; data-caption=&#34;Dialog&#34; href=&#34;/img/nino/dialog.png&#34;&gt;
+    &lt;img alt=&#34;&#34; src=&#34;/img/nino/dialog.png&#34;&gt;
+  &lt;/a&gt;
+  
+  
+  
+  
+    
+      
+    
+  
+  &lt;a data-fancybox=&#34;gallery-screenshots&#34; data-caption=&#34;Map names&#34; href=&#34;/img/nino/map.png&#34;&gt;
+    &lt;img alt=&#34;&#34; src=&#34;/img/nino/map.png&#34;&gt;
+  &lt;/a&gt;
+  
+  
+  
+  
+    
+      
+    
+  
+  &lt;a data-fancybox=&#34;gallery-screenshots&#34; data-caption=&#34;Menu&#34; href=&#34;/img/nino/menu.png&#34;&gt;
+    &lt;img alt=&#34;&#34; src=&#34;/img/nino/menu.png&#34;&gt;
+  &lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;h3 id=&#34;programming&#34;&gt;Programming:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create programs to convert text, image, audio and font files in easy formats
+to edit like XML, TXT, PO, PNG, WAV files.&lt;/li&gt;
+&lt;li&gt;Work together with translators and graphic editors to make easier to edit
+files and tools.&lt;/li&gt;
+&lt;li&gt;Edit video game source code in assembly format (ARM) to adapt occidental text
+in the screen. This includes changing: text and image positions, keyboard,
+font char spaces and increasing text limits.&lt;/li&gt;
+&lt;li&gt;Create build automation programs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;reverse-engineering&#34;&gt;Reverse engineering:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Figure out file the binary format of text, script, image, font and audio files.&lt;/li&gt;
+&lt;li&gt;Identify security algorithms (encryption, integrity and authentication) to
+modify DLC and save files.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;game-information&#34;&gt;Game information&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Original title: 二ノ国 漆黒の魔導士 (Ni no Kuni: Shikkoku no Madoshi)&lt;/li&gt;
+&lt;li&gt;Game release year: 2010&lt;/li&gt;
+&lt;li&gt;Platform: Nintendo DS&lt;/li&gt;
+&lt;li&gt;Region: Japan&lt;/li&gt;
+&lt;li&gt;Genre: RPG&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;fan-translation-information&#34;&gt;Fan translation information&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://gradienwords.tk/ninokuni/info.html&#34; target=&#34;_blank&#34;&gt;Website&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/pleonex/Ninokuni&#34; target=&#34;_blank&#34;&gt;Source code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Translation: Japanese to Spanish&lt;/li&gt;
+&lt;li&gt;Translated game and magic book&lt;/li&gt;
+&lt;li&gt;Duration: 4 years 2011 - 2015&lt;/li&gt;
+&lt;li&gt;Released: v1.1 &lt;em&gt;15 May 2015&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Team: Jefelin (Luis Salas), Pleonex, Nino48, Lord Raptor (PaladinKnights) Momin&lt;/li&gt;
+&lt;li&gt;Special thanks: Edueleno, Netty Andrew, Time Master, Ayako&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -183,19 +343,130 @@ protocol DDS with the implementation of RTI Connext DDS.&lt;/p&gt;
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
       <guid>/project/tinke/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/pleonex/tinke&#34; target=&#34;_blank&#34;&gt;Website link&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Wall-E: Robotic Arm</title>
-      <link>/project/robotic-arm/</link>
-      <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
-      
-      <guid>/project/robotic-arm/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/ieeeugrsb/Wall-E&#34; target=&#34;_blank&#34;&gt;Website link&lt;/a&gt;&lt;/p&gt;
+      <description>
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/pleonex/Arduimmer&#34; target=&#34;_blank&#34;&gt;Programmer&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;p&gt;Deprecated program. Superseded by &lt;a href=&#34;/project/yarhl/&#34;&gt;Yarhl&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Don&amp;rsquo;t judge the code, I wrote the whole program while learning programming 😄&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Source code&lt;/th&gt;
+&lt;th&gt;Forum&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/pleonex/tinke&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;http://gbatemp.net/topic/303529-tinke-072/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;GBATemp&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Tinke is a program to see, convert, and edit the files of NDS games.
+You can see a lot of format files like images, text, sounds, fonts and textures.
+Furthermore it works with plugins made in NET Framework languages
+(C# and VB.NET) so it&amp;rsquo;s so easy to support new formats.&lt;/p&gt;
+
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Show the ROM header with the banner and edit it.&lt;/li&gt;
+&lt;li&gt;Show and convert to common format a lot of files.&lt;/li&gt;
+&lt;li&gt;Edit a lot of image files from BMP files (NCLR, NCGR, NSCR, NCER), audio files from WAV (SWAV, SWAR, STRM) and fonts (NFTR).&lt;/li&gt;
+&lt;li&gt;Hexadecimal visor.&lt;/li&gt;
+&lt;li&gt;Change the content of the files and save the new ROM.&lt;/li&gt;
+&lt;li&gt;Multilanguage support.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+  
+  
+  
+  
+    
+      
+    
+  
+  &lt;a data-fancybox=&#34;gallery-tinke&#34; data-caption=&#34;Tinke UI&#34; href=&#34;/img/tinke/tinke.png&#34;&gt;
+    &lt;img alt=&#34;&#34; src=&#34;/img/tinke/tinke.png&#34;&gt;
+  &lt;/a&gt;
+  
+  
+  
+  
+    
+      
+    
+  
+  &lt;a data-fancybox=&#34;gallery-tinke&#34; data-caption=&#34;Information of Nintendo DS game header&#34; href=&#34;/img/tinke/nds_header.png&#34;&gt;
+    &lt;img alt=&#34;&#34; src=&#34;/img/tinke/nds_header.png&#34;&gt;
+  &lt;/a&gt;
+  
+  
+  
+  
+    
+      
+    
+  
+  &lt;a data-fancybox=&#34;gallery-tinke&#34; data-caption=&#34;View game textures&#34; href=&#34;/img/tinke/texture.png&#34;&gt;
+    &lt;img alt=&#34;&#34; src=&#34;/img/tinke/texture.png&#34;&gt;
+  &lt;/a&gt;
+  
+  
+  
+  
+    
+      
+    
+  
+  &lt;a data-fancybox=&#34;gallery-tinke&#34; data-caption=&#34;Specific game support via plugins (Professor Layton)&#34; href=&#34;/img/tinke/layton.png&#34;&gt;
+    &lt;img alt=&#34;&#34; src=&#34;/img/tinke/layton.png&#34;&gt;
+  &lt;/a&gt;
+  
+  
+  
+  
+    
+      
+    
+  
+  &lt;a data-fancybox=&#34;gallery-tinke&#34; data-caption=&#34;View game sprites&#34; href=&#34;/img/tinke/sprite.png&#34;&gt;
+    &lt;img alt=&#34;&#34; src=&#34;/img/tinke/sprite.png&#34;&gt;
+  &lt;/a&gt;
+  
+  
+  
+  
+    
+      
+    
+  
+  &lt;a data-fancybox=&#34;gallery-tinke&#34; data-caption=&#34;Listen to game music (and edit it)&#34; href=&#34;/img/tinke/audio.png&#34;&gt;
+    &lt;img alt=&#34;&#34; src=&#34;/img/tinke/audio.png&#34;&gt;
+  &lt;/a&gt;
+  
+  
+  
+  
+    
+      
+    
+  
+  &lt;a data-fancybox=&#34;gallery-tinke&#34; data-caption=&#34;View and edit game fonts&#34; href=&#34;/img/tinke/font.png&#34;&gt;
+    &lt;img alt=&#34;&#34; src=&#34;/img/tinke/font.png&#34;&gt;
+  &lt;/a&gt;
+  
+&lt;/div&gt;
 </description>
     </item>
     
@@ -205,7 +476,82 @@ protocol DDS with the implementation of RTI Connext DDS.&lt;/p&gt;
       <pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate>
       
       <guid>/project/yarhl/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/SceneGate/yarhl&#34; target=&#34;_blank&#34;&gt;Website link&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Website&lt;/th&gt;
+&lt;th&gt;Source code&lt;/th&gt;
+&lt;th&gt;Documentation&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://scenegate.github.io/Yarhl/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Here&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/SceneGate/yarhl&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://scenegate.github.io/Yarhl/api/Yarhl.html&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Here&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Yarhl&lt;/strong&gt; is a library for &lt;em&gt;ROM Hacking&lt;/em&gt; and fan-translation projects.
+It provides a virtual file system, file format and format conversion features
+and plugin support. It&amp;rsquo;s built in C# / .NET and works in Windows, Linux and
+Mac OS X.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Linux &amp;amp; Mac OS X&lt;/th&gt;
+&lt;th&gt;Windows&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Build &amp;amp; Test&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://travis-ci.org/SceneGate/Yarhl&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://travis-ci.org/SceneGate/Yarhl.svg?branch=master&#34; alt=&#34;Travis Build Status&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://travis-ci.org/SceneGate/Yarhl/builds&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://buildstats.info/travisci/chart/SceneGate/Yarhl&#34; alt=&#34;Travis Build history&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://ci.appveyor.com/project/pleonex/libgame/branch/master&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://ci.appveyor.com/api/projects/status/hjgmge090s7962q6/branch/master?svg=true&#34; alt=&#34;AppVeyor Build status&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://ci.appveyor.com/project/pleonex/libgame/history&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://buildstats.info/appveyor/chart/pleonex/libgame&#34; alt=&#34;AppVeyor Build history&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Quality report&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://sonarcloud.io/dashboard?id=yarhl&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://sonarcloud.io/api/project_badges/measure?project=yarhl&amp;amp;metric=alert_status&#34; alt=&#34;Sonar Gate&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Coverage&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://coveralls.io/github/SceneGate/Yarhl?branch=master&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://coveralls.io/repos/github/SceneGate/Yarhl/badge.svg?branch=master&#34; alt=&#34;Coveralls&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Quality Reports&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://sonarcloud.io/dashboard?id=yarhl&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://sonarcloud.io/api/project_badges/measure?project=yarhl&amp;amp;metric=alert_status&#34; alt=&#34;SonarCloud&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Quality Details&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://sonarcloud.io/dashboard?id=yarhl&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://sonarcloud.io/api/project_badges/measure?project=yarhl&amp;amp;metric=sqale_rating&#34; alt=&#34;Maintainability&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://sonarcloud.io/dashboard?id=yarhl&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://sonarcloud.io/api/project_badges/measure?project=yarhl&amp;amp;metric=bugs&#34; alt=&#34;Bugs&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://sonarcloud.io/dashboard?id=yarhl&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://sonarcloud.io/api/project_badges/measure?project=yarhl&amp;amp;metric=code_smells&#34; alt=&#34;Code smells&#34; /&gt;&lt;/a&gt; &lt;a href=&#34;https://sonarcloud.io/dashboard?id=yarhl&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://sonarcloud.io/api/project_badges/measure?project=yarhl&amp;amp;metric=duplicated_lines_density&#34; alt=&#34;Duplicated lines&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Code Stats&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://sonarcloud.io/dashboard?id=yarhl&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://sonarcloud.io/api/project_badges/measure?project=yarhl&amp;amp;metric=ncloc&#34; alt=&#34;Lines of code&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </description>
     </item>
     

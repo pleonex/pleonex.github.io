@@ -236,7 +236,7 @@ protocol DDS with the implementation of RTI Connext DDS.&lt;/p&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;As a member of the GradienWords fan-translation group, I worked in my free time
-as Localization Engineer to translate from Japaese to Spanish the game:
+as Localization Engineer to translate from Japanese to Spanish the game:
 &lt;em&gt;&amp;ldquo;Ni no kuni: Shikkoku no Madoshi&amp;rdquo;&lt;/em&gt; for Nintendo DS.
 In this altruistic project we did reverse engineering in the game to translate
 all the text and images files as well as edit font files and assembly code.&lt;/p&gt;
@@ -382,7 +382,7 @@ Furthermore it works with plugins made in NET Framework languages
 &lt;li&gt;Edit a lot of image files from BMP files (NCLR, NCGR, NSCR, NCER), audio files from WAV (SWAV, SWAR, STRM) and fonts (NFTR).&lt;/li&gt;
 &lt;li&gt;Hexadecimal visor.&lt;/li&gt;
 &lt;li&gt;Change the content of the files and save the new ROM.&lt;/li&gt;
-&lt;li&gt;Multilanguage support.&lt;/li&gt;
+&lt;li&gt;Translated to multiple languages.&lt;/li&gt;
 &lt;/ul&gt;
 
 

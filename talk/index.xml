@@ -6,7 +6,7 @@
     <description>Recent content in Recent &amp; Upcoming Talks on Pleotonic Engineering</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018 Benito Palacios Sánchez</copyright>
+    <copyright>&amp;copy; 2019 Benito Palacios Sánchez</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
@@ -19,7 +19,7 @@
       
       <guid>/talk/airorom-jasyp18/</guid>
       <description>Talk at the JASyP (Jornadas de Anonimato, Seguridad y Privacidad). Organized by the group Interferencias in the University of Granada. I talked about the security mechanisms like encryption that we can find inside of the video-games with the goal to obfuscate their files to avoid hacks, mods and fan-translations.
-  </description>
+ </description>
     </item>
     
     <item>
@@ -29,7 +29,7 @@
       
       <guid>/talk/rh01-texts/</guid>
       <description>Live streaming from the virtual reality platform AltspaceVR. The talk explains different topics and concept related to text formats like encodings, tables, fonts and compression.
-  </description>
+ </description>
     </item>
     
     <item>
@@ -39,7 +39,7 @@
       
       <guid>/talk/rh02-imgs/</guid>
       <description>Live streaming from Twitch requested by the TraduSquare community. This time I talked about the file format of the images, sprites and textures in video-games and all the kind of compression and techniques used in the Nintendo DS.
-  Following this talk, the next day I did a second live streaming where the people choose three games for Nintendo DS and I had to figure out the image formats:</description>
+ Following this talk, the next day I did a second live streaming where the people choose three games for Nintendo DS and I had to figure out the image formats:</description>
     </item>
     
     <item>

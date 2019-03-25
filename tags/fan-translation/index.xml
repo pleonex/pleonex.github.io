@@ -6,7 +6,7 @@
     <description>Recent content in fan-translation on Pleotonic Engineering</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018 Benito Palacios Sánchez</copyright>
+    <copyright>&amp;copy; 2019 Benito Palacios Sánchez</copyright>
     <lastBuildDate>Sun, 04 Nov 2018 02:01:00 +0100</lastBuildDate>
     
 	<atom:link href="/tags/fan-translation/index.xml" rel="self" type="application/rss+xml" />
@@ -19,7 +19,7 @@
       
       <guid>/project/ninokuni/</guid>
       <description>As a member of the GradienWords fan-translation group, I worked in my free time as Localization Engineer to translate from Japanese to Spanish the game: &amp;ldquo;Ni no kuni: Shikkoku no Madoshi&amp;rdquo; for Nintendo DS. In this altruistic project we did reverse engineering in the game to translate all the text and images files as well as edit font files and assembly code.
-     Programming:  Create programs to convert text, image, audio and font files in easy formats to edit like XML, TXT, PO, PNG, WAV files.</description>
+ Programming:  Create programs to convert text, image, audio and font files in easy formats to edit like XML, TXT, PO, PNG, WAV files.</description>
     </item>
     
   </channel>

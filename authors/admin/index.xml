@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pleotonic Engineering</title><link>https://pleonex.dev/authors/admin/</link><atom:link href="https://pleonex.dev/authors/admin/index.xml" rel="self" type="application/rss+xml"/><description>Pleotonic Engineering</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copytight © 2019 Benito Palacios Sánchez</copyright><lastBuildDate>Wed, 25 Dec 2019 15:59:04 +0100</lastBuildDate><image><url>https://pleonex.dev/img/portrait.jpg</url><title>Pleotonic Engineering</title><link>https://pleonex.dev/authors/admin/</link></image><item><title>Pokémon Conquest: NPC names</title><link>https://pleonex.dev/post/pokconq-names/</link><pubDate>Wed, 25 Dec 2019 15:59:04 +0100</pubDate><guid>https://pleonex.dev/post/pokconq-names/</guid><description>&lt;h2 id="intro">Intro&lt;/h2>
+&lt;p>Pokémon Conquest (NDS) is one of the games I would like to translate to Spanish. I have already created almost all the tools to extract, modify and insert the content. This time, I would like to focus in the story dialogs. Below is one example:&lt;/p>
+&lt;pre>&lt;code class="language-plain">{char:0058}{speaker_color:2}{char_img:0}
+Hey, you!{wait:48}20 You're {name1}, right? {color:49}Aurora{color:51}'s new
+Warlord?
+&lt;/code>&lt;/pre>
+&lt;p>If you take a closer look you will notice we are missing something: &lt;strong>we don't know the name of the character speaking&lt;/strong>. This is a very important information for translators, because otherwise they are out of context. For instance, they won't know the gender of the person speaking (in Spanish we have male and female version of nouns and adjetives).&lt;/p>
+&lt;p>So let's try to figure out where are the names and how we can relate them to each dialog.&lt;/p>
+&lt;h2 id="the-location-of-the-names">The location of the names&lt;/h2>
+&lt;p>First, let's find out where are the names inside the game files. I will pick the name of the person speaking in the example dialog: &lt;code>Koroku&lt;/code>. So let's open the game with an hexadecimal editor (I like &lt;a href="https://mh-nexus.de/en/hxd/">HxD&lt;/a>) and search the text. The search returns that the text is located at &lt;code>0x00185134&lt;/code>. We just need to know which game file is at that address. The easier method is to use &lt;a href="https://github.com/pleonex/tinke/">Tinke&lt;/a>. We open the game with this program and type in the search box the magic words: &lt;code>Offset: 00185134&lt;/code>. It will show us at this address we have the file &lt;strong>&lt;code>BaseBushou.dat&lt;/code>&lt;/strong>.&lt;/p>
+&lt;p>&lt;img src="hxd_search.png" alt="The hexadecimal editor and Tinke">&lt;/p>
+&lt;p>We ran a quick test that this is indeed the file and field that we need to change by editing the name and importing back the file into the game.&lt;/p>
+&lt;p>&lt;img src="edit1.png" alt="Game shows &amp;lsquo;Pleonet&amp;rsquo; instead of Koroku">&lt;/p>
+&lt;p>Voila. As you can see I changed in the file the name &lt;code>Koroku&lt;/code> with &lt;code>Pleonet&lt;/code> and now the latter is showing as the character speaking.&lt;/p>
+&lt;h2 id="matching-the-dialog-with-the-name">Matching the dialog with the name&lt;/h2>
+&lt;p>We know the file that contain the list of names. This is useful in case we want to change them. But we don't know who is speaking in the dialog yet. Let's check again the raw dialog text:&lt;/p>
+&lt;pre>&lt;code class="language-plain">{char:0058}{speaker_color:2}{char_img:0}
+Hey, you!{wait:48}20 You're {name1}, right? {color:49}Aurora{color:51}'s new
+Warlord?
+&lt;/code>&lt;/pre>
+&lt;p>There are a couple of interesting metadata in that dialog. In the actual game file they have binary bytes, but after some try-and-see changes I was able to determine that:&lt;/p>
+&lt;ul>
+&lt;li>By changing the first &lt;code>00058&lt;/code> control code, the name of the person speaking changes. So I named it &lt;code>char&lt;/code> from &lt;em>character&lt;/em>.&lt;/li>
+&lt;li>The second control code, &lt;code>2&lt;/code> in some cases changes the color of the person speaking changes. So &lt;code>speaker_color&lt;/code>.&lt;/li>
+&lt;li>Finally, the third control code must be the sprite of the NPC. There are several per person to show different emotions, so I named it &lt;code>char_img&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>Clearly, the control code we should investigate further is the first one. Somehow the number &lt;code>0058&lt;/code> is related to the text &lt;code>Koroku&lt;/code>. We just need to know what kind of algorithm the game follows to get the text from the number. It's time to do some disassembly.&lt;/p>
+&lt;p>&lt;img src="setup_env.png" alt="IDA Pro and DeSmuME opened">&lt;/p>
+&lt;p>As always, the easier method is to play until the game shows the dialog. Then, we search the text in the memory and put a read-breakpoint in the control code &lt;code>char&lt;/code> (in binary &lt;code>1B 40&lt;/code>), so we can start following the game logic to associate the number with the name. In my case the search returned three copies of the text: &lt;code>0x020C3B66&lt;/code>, &lt;code>0x020C4942&lt;/code> and &lt;code>0x02263D4E&lt;/code>. So three breakpoint since we can't be sure which one the game will actually process.&lt;/p>
+&lt;p>The first one we expect to break is the third breakpoint because it contains the whole script in memory. This is probably the script file in memory. And from this location it will copy the text to another temporary places. And exactly as expected, I see that the game breaks there to copy our first control code argument &lt;code>0058&lt;/code> into the temporary memory place (the stack): &lt;code>0x02FE2F38&lt;/code>. One more breakpoint there.&lt;/p>
+&lt;p>From the copy in the stack, it copies now the text into the already-known location of our second breakpoint. So we continue, and the game starts doing something more interesting as shown below:&lt;/p>
+&lt;p>&lt;img src="convert_to_num.png" alt="Algorithm to convert string into num">&lt;/p>
+&lt;p>This small algorithm convert the text into a number. The logic is simple: it substract each char &lt;code>0x30&lt;/code> which is &lt;code>0&lt;/code> in ASCII. So, &lt;code>5&lt;/code> in ASCII is &lt;code>0x35&lt;/code> minus &lt;code>0x30&lt;/code> is &lt;code>5&lt;/code>. It's this simple to convert a char into a number. Then it multiply the current result by 10 to move the result to the left and adds the next number.&lt;/p>
+&lt;p>The method iterates to try to find three control codes: &lt;code>1B 40&lt;/code>, &lt;code>1B 73&lt;/code> and &lt;code>1B 66&lt;/code>. In order, they correspond to my named control codes: &lt;code>char&lt;/code>, &lt;code>speaker_color&lt;/code> and &lt;code>char_img&lt;/code>. We found the subrouting that parse the first three control code that each dialog usually have. If the method is able to parse and convert each argument into a number, it stores the result in three output registers. For our number of interest, the result goes to another stack address: &lt;code>0x02FE2F94&lt;/code>. Let's follow now this one.&lt;/p>
+&lt;p>The address was coming from the stack because is a variable from the caller (&lt;code>SP + 0x14&lt;/code>). The first thing it does is to fail if the number is larger than &lt;code>0x270F&lt;/code>. Then, it calls again the previous subroutine to parse the numbers, because why not making the game a bit slower? Hands in the next subroutine where it compares our number with &lt;code>0x3E8&lt;/code>, gets the pointer to &lt;code>0x022797F0&lt;/code> and go deep into the next function. The pointer seems to point to a game file, let's try to find it&amp;hellip; And yes, it's the file &lt;code>ScenarioBushou.dat&lt;/code>.&lt;/p>
+&lt;p>&lt;img src="tinke_search.png" alt="Game reading file and search with HxD and Tinke">&lt;/p>
+&lt;p>Our target argument number is actually an index. The game multiplies this number by 0x20 and reads four bytes: &lt;code>88021264&lt;/code>. It removes bits with bitwise shifts so it gets the bits from 17 to 21, in our case just &lt;code>1&lt;/code>. And&amp;hellip; it does nothing with the result. 😦 😑&lt;/p>
+&lt;p>Back to the caller, there is still one more place where it can use our number. A few lines after, it checks if the number is between 0 and 1000. If this is the case, it gets again the pointer to &lt;code>ScenarioBushou.dat&lt;/code> and call a new function: &lt;code>0204FB80&lt;/code>.&lt;/p>
+&lt;p>It checks if the number is larger than &lt;code>0xD1&lt;/code>, if that's the case it returns an empty string &lt;code>\0&lt;/code>. It gets again our four bytes flag field, but this time it gets the first 9 bits: &lt;code>64&lt;/code>. And just, before finishing this function, it gets the pointer to the file &lt;code>BaseBushou&lt;/code> and start doing &lt;em>things&lt;/em>.&lt;/p>
+&lt;p>If the number from the flag field is less than &lt;code>0xFB&lt;/code>, it multiplies the number by &lt;code>0x14&lt;/code> and read four bytes from the file at that location (address: &lt;code>0x7D0&lt;/code>, content: &lt;code>00967575&lt;/code>). It gets the bits from 17 to 25 which is &lt;code>0x4B&lt;/code>. Now, from the file position &lt;code>0x17A0&lt;/code>, it jumps to this last number multiply by &lt;code>0x0C&lt;/code>: &lt;code>0x02279188&lt;/code>.&lt;/p>
+&lt;p>Remember this address? Yes! It's pointing to our NPC name. Finally!&lt;/p>
+&lt;p>&lt;img src="name_id_logic.png" alt="Assembly code with this last logic">&lt;/p>
+&lt;h2 id="summary">Summary&lt;/h2>
+&lt;p>This was a chaos of parsing and reading unncessary files and fields but at the end the logic is simple.
+The argument of the control code in the dialog text (&lt;code>0058&lt;/code>) is the index to an structure with fixed length 32 bytes in &lt;code>ScenarioBushou.dat&lt;/code>. We are interested in the first 9 bits of this structure. So we multiply &lt;code>0058&lt;/code> by &lt;code>0x20&lt;/code> and get the first 9 bits: &lt;code>0x64&lt;/code>. This is the index to another structure in &lt;code>BaseBushou.dat&lt;/code> of fixed length 20 bytes. We multiply this second index by &lt;code>0x14&lt;/code> and get the name index by reading the bits 17-25: &lt;code>0x4B&lt;/code>. The name will be starting at &lt;code>0x17A0&lt;/code> multiplying the name index by the name lengths (&lt;code>0x0C&lt;/code>).&lt;/p>
+&lt;p>&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="751px" viewBox="-0.5 -0.5 751 601" content="&amp;lt;mxfile host=&amp;quot;Electron&amp;quot; modified=&amp;quot;2019-12-25T19:35:28.161Z&amp;quot; agent=&amp;quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/12.4.2 Chrome/78.0.3904.130 Electron/7.1.4 Safari/537.36&amp;quot; etag=&amp;quot;EaymEHoXLquEKWnW27Gp&amp;quot; version=&amp;quot;12.4.2&amp;quot; type=&amp;quot;device&amp;quot; pages=&amp;quot;1&amp;quot;&amp;gt;&amp;lt;diagram name=&amp;quot;Page-1&amp;quot; id=&amp;quot;0783ab3e-0a74-02c8-0abd-f7b4e66b4bec&amp;quot;&amp;gt;7Vptc6M2EP41nn5KBiHA9sfYeelN0+tNPXNtPsqggBIhuUKc7f76SiAMWNghl7Nxp81MPOxKCOnZfXZXghGcp5sHgVbJrzzCdOQ60WYEb0euOxk76lcrtqUi8P1SEQsSlSpQKxbkb2yU5r44JxHOWh0l51SSVVsZcsZwKFs6JARft7s9c9p+6grF2FIsQkRt7R8kkolZlu/U+p8xiZPqycAxLUsUvsaC58w8b+TC5+KvbE5RNZbpnyUo4uuGCt6N4FxwLsurdDPHVENbwVbed3+gdTdvgZnsdUMIIm/qhQBMAgdG0ZUZ4RuiucHiC38dzeHoZppyplrmnP2V40yqyyv1/4D11ecvc/XLUIrNsuS2gjJbk5QipqRZIlOqlEBdhgmh0SPa8lxPM5MKtkqaKUlI4xNq+nBW4In1jLW0g0wLIU9JaK4pWmI62xlgzikXqonx4uGZFPx1Z009h2fO5D1KCdVO+hWLCDFk1ObpQNljhiiJmRJCBSlWA84iIpTPEa6VGGV6yjbsFY5YSLxpqIwZHjBPsRRb1cW0esYjDGNcaOR17X/jyv+Shu8Flesh4/Pxbuja7urCmL6nG7iWGyxCQVba1s+E9rWyZckOnA454NvAVUjZQLldQPmTI0CZ0X9XhkUs1gs8MjzsGN2De6MjqryFIYln2hkzyxq7hfQyUPLqQHf71Zk8RL/Mnhwn++3x9SqwzIAjFcaMyIVMeMwZone1do9LdZ9HzlfGai9Yyq2xGsolb9u0fKZ+0MGQc8ibMp6LEB9ZEDShHokYyyP9vG6HEJgiSb61J/YRWhybZIMatwRRHhc5Suc8kq0o2lq2qZHXMK4TIvFihQo81iqJdqFskaAPzgcjTOC3IkxHgAFuh2fvO/YPA7JK9uf1X7wh8k99+7VvpKdGy+3GjFwI20pgar2Nm7T41Gyrbyuk6r5TcsXryZXxkFzxLK7cE1UaqWknuCzfVFamxVWkFUBB5ni2X7StPgB3xm3uTDu443TlnFNxZ2oB+5kPyqYGl2pmdbPplKwY92TFZEhWALu6esLZkOYD7zBfMxhqEBvh8Fot9o2QWEhfsCAKSl1NX4xHgANV5nlcYmwHynITeW/HwoSnyzwbJg5O3et2JASBHQqrQqO9TTkRchO7HOPsJ9ksxLo3poPXY/tQdlVk066k4p8qLnVs/pHIdGJWRa9zs5h/+qRzdaKUeixW1LtIA5ynS83mG62+vOwN/L3NtTvphXTgfhxpa6r2/mERYoYE4bM8S3h+HSFpQTjE/rpy033wfsR++2N+Oh0kV37nJsA+ePqedAd7pjsQ9M13w5ZAgZ3wmjsDcqXQ0hYWeShzoVX8eaQPnzZY98q0lVxdbrjOcis7qqczBB14lDfBfnT3LN507rdPtmcAdqosT29LyJdE6qjuqIxaxPGXi4cUgp5HGN7JIB0PEok+VLW3K3b/LNEL9I1e1cueN6NXcKboZS3FPtKYoQxfZur2nUtL3VXh9V9K3V5P53f7Hum5/pCp233jUO+lX+rWvjhc6j7wBuHQSbk/cOqGwxyV/zto4/elzXRQ2vh9qi8w1h2L+otdPi8mQ9dfEFog/c+Llrv34AU8cHhyJl7YrzJa6YSV6aQ8wuvMJKCxCXSKuoow/TZW12KOswHjm0FeKL2LSp7fk0onO0eFrmWH28EPUN+Foe/1xPBkb7QhsEA6azi66K3dpG+aPtHXHUqsv6srP8Gpv12Ed/8A&amp;lt;/diagram&amp;gt;&amp;lt;/mxfile&amp;gt;" onclick="(function(svg){var src=window.event.target||window.event.srcElement;while (src!=null&amp;amp;&amp;amp;src.nodeName.toLowerCase()!='a'){src=src.parentNode;}if(src==null){if(svg.wnd!=null&amp;amp;&amp;amp;!svg.wnd.closed){svg.wnd.focus();}else{var r=function(evt){if(evt.data=='ready'&amp;amp;&amp;amp;evt.source==svg.wnd){svg.wnd.postMessage(decodeURIComponent(svg.getAttribute('content')),'*');window.removeEventListener('message',r);}};window.addEventListener('message',r);svg.wnd=window.open('https://www.draw.io/?client=1&amp;amp;lightbox=1&amp;amp;edit=_blank');}}})(this);" style="cursor:pointer;max-width:100%;max-height:601px;">&lt;defs/>&lt;g>&lt;path d="M 0 20 L 0 0 L 750 0 L 750 20" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>&lt;path d="M 0 20 L 0 600 L 750 600 L 750 20" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 0 20 L 750 20" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;g transform="translate(254.5,4.5)">&lt;switch>&lt;foreignObject style="overflow:visible;" pointer-events="none" width="240" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Verdana; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; font-weight: bold; text-align: center;">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Pokémon Conquest - Get NPC name&lt;/div>&lt;/div>&lt;/foreignObject>&lt;text x="120" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Verdana" font-weight="bold">Pokémon Conquest - Get NPC name&lt;/text>&lt;/switch>&lt;/g>&lt;path d="M 0 40 L 0 20 L 250 20 L 250 40" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 0 40 L 0 600 L 250 600 L 250 40" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 0 40 L 250 40" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;g transform="translate(97.5,24.5)">&lt;switch>&lt;foreignObject style="overflow:visible;" pointer-events="none" width="55" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; font-weight: bold; text-align: center;">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">Script file&lt;/div>&lt;/div>&lt;/foreignObject>&lt;text x="28" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">Script file&lt;/text>&lt;/switch>&lt;/g>&lt;path d="M 125 80 L 125 100 L 125 90 L 125 103.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 125 108.88 L 121.5 101.88 L 125 103.63 L 128.5 101.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;rect x="65" y="50" width="120" height="30" rx="4.5" ry="4.5" fill="#ffffff" stroke="#000000" pointer-events="none"/>&lt;g transform="translate(80.5,58.5)">&lt;switch>&lt;foreignObject style="overflow:visible;" pointer-events="none" width="88" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 89px; white-space: nowrap; overflow-wrap: normal; text-align: center;">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;white-space:normal;">Dialog to display&lt;/div>&lt;/div>&lt;/foreignObject>&lt;text x="44" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">Dialog to display&lt;/text>&lt;/switch>&lt;/g>&lt;path d="M 125 160 L 125 173.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 125 178.88 L 121.5 171.88 L 125 173.63 L 128.5 171.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;rect x="75" y="110" width="100" height="50" fill="#ffffff" stroke="#000000" pointer-events="none"/>&lt;g transform="translate(76.5,121.5)">&lt;switch>&lt;foreignObject style="overflow:visible;" pointer-events="none" width="96" height="26" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 96px; white-space: nowrap; overflow-wrap: normal; text-align: center;">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;white-space:normal;">Find the control code 1B 40&lt;/div>&lt;/div>&lt;/foreignObject>&lt;text x="48" y="19" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">Find the control code 1B 40&lt;/text>&lt;/switch>&lt;/g>&lt;path d="M 93 210 L 48 210 L 48 243.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 48 248.88 L 44.5 241.88 L 48 243.63 L 51.5 241.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;g transform="translate(42.5,204.5)">&lt;switch>&lt;foreignObject style="overflow:visible;" pointer-events="none" width="14" height="11" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#ffffff;">No&lt;/div>&lt;/div>&lt;/foreignObject>&lt;text x="7" y="11" fill="#000000" text-anchor="middle" font-size="11px" font-family="Helvetica">No&lt;/text>&lt;/switch>&lt;/g>&lt;path d="M 158 210 L 197 210 L 197 243.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 197 248.88 L 193.5 241.88 L 197 243.63 L 200.5 241.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;g transform="translate(187.5,205.5)">&lt;switch>&lt;foreignObject style="overflow:visible;" pointer-events="none" width="18" height="11" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 11px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; text-align: center;">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;background-color:#ffffff;">Yes&lt;/div>&lt;/div>&lt;/foreignObject>&lt;text x="9" y="11" fill="#000000" text-anchor="middle" font-size="11px" font-family="Helvetica">Yes&lt;/text>&lt;/switch>&lt;/g>&lt;path d="M 125 180 L 157.5 210 L 125 240 L 92.5 210 Z" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;g transform="translate(104.5,203.5)">&lt;switch>&lt;foreignObject style="overflow:visible;" pointer-events="none" width="41" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 42px; white-space: nowrap; overflow-wrap: normal; text-align: center;">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;white-space:normal;">Found?&lt;/div>&lt;/div>&lt;/foreignObject>&lt;text x="21" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">Found?&lt;/text>&lt;/switch>&lt;/g>&lt;rect x="2.5" y="250" width="90" height="55" rx="8.25" ry="8.25" fill="#ffffff" stroke="#000000" pointer-events="none"/>&lt;g transform="translate(4.5,264.5)">&lt;switch>&lt;foreignObject style="overflow:visible;" pointer-events="none" width="86" height="26" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 86px; white-space: nowrap; overflow-wrap: normal; text-align: center;">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;white-space:normal;">Don't display name&lt;/div>&lt;/div>&lt;/foreignObject>&lt;text x="43" y="19" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">Don't display name&lt;/text>&lt;/switch>&lt;/g>&lt;rect x="150" y="248" width="90" height="62" fill="#ffffff" stroke="#000000" pointer-events="none"/>&lt;g transform="translate(151.5,258.5)">&lt;switch>&lt;foreignObject style="overflow:visible;" pointer-events="none" width="86" height="40" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 86px; white-space: nowrap; overflow-wrap: normal; text-align: center;">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;white-space:normal;">Parse 3 ASCII chars into a number: i&lt;/div>&lt;/div>&lt;/foreignObject>&lt;text x="43" y="26" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]&lt;/text>&lt;/switch>&lt;/g>&lt;path d="M 250 40 L 250 20 L 500 20 L 500 40" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 250 40 L 250 600 L 500 600 L 500 40" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 250 40 L 500 40" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;g transform="translate(316.5,24.5)">&lt;switch>&lt;foreignObject style="overflow:visible;" pointer-events="none" width="117" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; font-weight: bold; text-align: center;">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">ScenarioBushou.dat&lt;/div>&lt;/div>&lt;/foreignObject>&lt;text x="59" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">ScenarioBushou.dat&lt;/text>&lt;/switch>&lt;/g>&lt;path d="M 375 304 L 375 324 L 375 310 L 375 323.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 375 328.88 L 371.5 321.88 L 375 323.63 L 378.5 321.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;rect x="315" y="254" width="120" height="50" fill="#ffffff" stroke="#000000" pointer-events="none"/>&lt;g transform="translate(316.5,265.5)">&lt;switch>&lt;foreignObject style="overflow:visible;" pointer-events="none" width="116" height="26" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 116px; white-space: nowrap; overflow-wrap: normal; text-align: center;">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;white-space:normal;">Find the i-th structure of fixed size 32 bytes&lt;/div>&lt;/div>&lt;/foreignObject>&lt;text x="58" y="19" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">Find the i-th structure of fixed size 32 bytes&lt;/text>&lt;/switch>&lt;/g>&lt;rect x="315" y="330" width="120" height="40" fill="#ffffff" stroke="#000000" pointer-events="none"/>&lt;g transform="translate(329.5,343.5)">&lt;switch>&lt;foreignObject style="overflow:visible;" pointer-events="none" width="91" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 92px; white-space: nowrap; overflow-wrap: normal; text-align: center;">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;white-space:normal;">Get the bits 0-8: j&lt;/div>&lt;/div>&lt;/foreignObject>&lt;text x="46" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">Get the bits 0-8: j&lt;/text>&lt;/switch>&lt;/g>&lt;path d="M 240 279 L 308.63 279" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 313.88 279 L 306.88 282.5 L 308.63 279 L 306.88 275.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 500 40 L 500 20 L 750 20 L 750 40" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 500 40 L 500 600 L 750 600 L 750 40" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 500 40 L 750 40" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;g transform="translate(577.5,24.5)">&lt;switch>&lt;foreignObject style="overflow:visible;" pointer-events="none" width="95" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; white-space: nowrap; font-weight: bold; text-align: center;">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;">BaseBushou.dat&lt;/div>&lt;/div>&lt;/foreignObject>&lt;text x="48" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">BaseBushou.dat&lt;/text>&lt;/switch>&lt;/g>&lt;path d="M 625 375 L 625 395 L 625 380 L 625 393.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 625 398.88 L 621.5 391.88 L 625 393.63 L 628.5 391.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;rect x="565" y="325" width="120" height="50" fill="#ffffff" stroke="#000000" pointer-events="none"/>&lt;g transform="translate(566.5,336.5)">&lt;switch>&lt;foreignObject style="overflow:visible;" pointer-events="none" width="116" height="26" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 116px; white-space: nowrap; overflow-wrap: normal; text-align: center;">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;white-space:normal;">Find the j-th structure of fixed size 20 bytes&lt;/div>&lt;/div>&lt;/foreignObject>&lt;text x="58" y="19" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">Find the j-th structure of fixed size 20 bytes&lt;/text>&lt;/switch>&lt;/g>&lt;path d="M 625 440 L 625 460 L 625 450 L 625 463.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 625 468.88 L 621.5 461.88 L 625 463.63 L 628.5 461.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;rect x="565" y="400" width="120" height="40" fill="#ffffff" stroke="#000000" pointer-events="none"/>&lt;g transform="translate(570.5,413.5)">&lt;switch>&lt;foreignObject style="overflow:visible;" pointer-events="none" width="109" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 110px; white-space: nowrap; overflow-wrap: normal; text-align: center;">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;white-space:normal;">Get the bits 17-25: n&lt;/div>&lt;/div>&lt;/foreignObject>&lt;text x="55" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">Get the bits 17-25: n&lt;/text>&lt;/switch>&lt;/g>&lt;path d="M 625 530 L 625 550 L 625 540 L 625 553.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 625 558.88 L 621.5 551.88 L 625 553.63 L 628.5 551.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;rect x="565" y="470" width="120" height="60" fill="#ffffff" stroke="#000000" pointer-events="none"/>&lt;g transform="translate(566.5,479.5)">&lt;switch>&lt;foreignObject style="overflow:visible;" pointer-events="none" width="116" height="40" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 116px; white-space: nowrap; overflow-wrap: normal; text-align: center;">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;white-space:normal;">Find the n-th name of fixed size 12 bytes starting at 0x17A0&lt;/div>&lt;/div>&lt;/foreignObject>&lt;text x="58" y="26" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">[Not supported by viewer]&lt;/text>&lt;/switch>&lt;/g>&lt;rect x="565" y="560" width="120" height="30" rx="4.5" ry="4.5" fill="#ffffff" stroke="#000000" pointer-events="none"/>&lt;g transform="translate(588.5,568.5)">&lt;switch>&lt;foreignObject style="overflow:visible;" pointer-events="none" width="73" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; vertical-align: top; width: 74px; white-space: nowrap; overflow-wrap: normal; text-align: center;">&lt;div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;white-space:normal;">Display name&lt;/div>&lt;/div>&lt;/foreignObject>&lt;text x="37" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">Display name&lt;/text>&lt;/switch>&lt;/g>&lt;path d="M 435 350 L 558.63 350" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;path d="M 563.88 350 L 556.88 353.5 L 558.63 350 L 556.88 346.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="none"/>&lt;/g>&lt;/svg>&lt;/p></description></item><item><title>Dissertation</title><link>https://pleonex.dev/project/airorom/</link><pubDate>Wed, 25 Dec 2019 13:53:12 +0100</pubDate><guid>https://pleonex.dev/project/airorom/</guid><description>&lt;h1 id="data-protection-mechanisms-in-video-games">Data Protection Mechanisms in Video Games&lt;/h1>
+&lt;div class="alert alert-note">
+&lt;div>
+Grade: 9.9 / 10
+&lt;/div>
+&lt;/div>
+&lt;p>Electrical Engineering Bachelor dissertation.
+I researched different video games of Nintendo DS to find out how they were
+protecting different sensitive content like text, video and audio to avoid
+modifications and/or access. I documented the different algorithms, their
+weakness and several recommendations to improve the protection.&lt;/p>
+&lt;h3 id="abstract">Abstract&lt;/h3>
+&lt;p>Video games are getting one of the most important elements of our culture.
+The mobile market boom has made companies behind games like &lt;em>Candy Crush&lt;/em> very successful.
+In that specific case, the game has about 356 millions of unique users and 1.300 millions of dollars in benefits.
+The video game industry is in fact only before the book's one in top of profits and it gets over music and cinema.
+It is not only about entertainment but also for education, specially for children, for instance, to learn new languages and help with mathematics.&lt;/p>
+&lt;p>All that benefit makes to think about how to protect against possible &amp;lsquo;attacks&amp;rsquo;.
+They started fighting piracy with Digital Rights Management techniques, that is, releasing copy of games without permissions from the author, but nowadays it deals with more fields.
+Mods, cheats in online plays and translations made by fans to languages where the company is going to release a port of the game are only some examples.&lt;/p>
+&lt;p>This project aims to offer a new perspective about game security.
+In it, we analyze products from Nintendo DS and Play Station 3 devices and mobile platforms like Android and iOS, to show what kind of techniques has been used to protect both text and images files, as well as sound archives.
+Communication protocols for online services, download content protection and wireless code transmission will be studied too.
+The general purpose of all these protection is to avoid doing reverse engineering, that is, disassemble the product to study all its pieces and resources.&lt;/p>
+&lt;p>Reverse engineering is one of the main topics of this dissertation.
+Usually it is done as a hobby but, with the rights tools and knowledge it is a powerful way to test the security of a system.
+Related to video games, it is called &lt;em>romhacking&lt;/em>, since it is about modify (&lt;em>hack&lt;/em>) a game (usually distributed in &lt;em>Read Only Memories&lt;/em>).
+These project will use common tools like disassemblers and debuggers.
+For instance, for Nintendo DS games two emulators will be used.
+The first one, DeSmuME, since it is open source, it will allow to hack its code to automatize task and save network packets.
+The second one, No$GBA, &lt;em>freeware&lt;/em>, includes a built-in debugger so it will be used to analyze code and algorithms.
+Some tools have been developed to help with the task of studying games, like binary searcher, database manager and some game specific exporters.
+Furthermore, all the methodology followed to figure out formats and algorithms will be explained in detail.&lt;/p>
+&lt;p>This project concludes with a summary of the mechanism analyzed, with recommendations to improve them.
+Most copyright contents, that usually contains DRM in virtual stores, are not protected in games.
+That refers to music, electronic books and videos.
+However, text and images are usually protected with encryption by using &lt;code>XOR&lt;/code> operand, &lt;code>HMAC&lt;/code> algorithm or a digital signature.
+About the online services, it will show how bad protocol designs has been found, with some vulnerabilities that allow to users to cheat, but also how in some games the download content has a good protection against external modifications and man-in-the-middle attacks.&lt;/p></description></item><item><title>El misterio de las claves de Pokémon Mundo Misterioso</title><link>https://pleonex.dev/talk/devfestjaen18/</link><pubDate>Sat, 17 Nov 2018 18:00:00 +0100</pubDate><guid>https://pleonex.dev/talk/devfestjaen18/</guid><description>&lt;p>Talk at the DevFest 2018 organized by the GDG Jaén (&lt;em>Google Developer Group&lt;/em>).
+The presentation is about a Twitter thread I did on July. For a week I was
+figuring out how the game &lt;em>Pokémon Mistery Dungeon Explorers of Sky&lt;/em> from
+Nintendo DS generate and validate a kind of password for rescue missions,
+special events and object sharing. It almost a study of the assembly code
+of the game with some notes about the implementation.&lt;/p>
+&lt;blockquote class="twitter-tweet">&lt;p lang="es" dir="ltr">Hoy me he puesto el reto de averiguar cómo funcionan las contraseñas de Pokémon Mundo Misterioso (NDS). Son un montón de caracteres &amp;quot;aleatorios&amp;quot; que puedes compartir para que otras personas te rescaten desde sus juegos. Voy a ir contando lo que averiguo 🔽 &lt;a href="https://t.co/0ZRz1361Ol">pic.twitter.com/0ZRz1361Ol&lt;/a>&lt;/p>&amp;mdash; Benito 🧐 (@pleonex) &lt;a href="https://twitter.com/pleonex/status/1015933593904992256?ref_src=twsrc%5Etfw">July 8, 2018&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;div class="responsive-wrap">
+&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQXQvdFkmg0Qt-4w9XG01Oor1kI9j4-GA_iOlTKy2zudgOa9e-VoR5uBfPLNTY3EzxGjNZcHc4JS16G/embed?start=false&amp;amp;loop=false&amp;amp;delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
+&lt;/div></description></item><item><title>IV Tech Challenge</title><link>https://pleonex.dev/project/tech-challenge/</link><pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate><guid>https://pleonex.dev/project/tech-challenge/</guid><description>
+&lt;figure>
+&lt;a data-fancybox="" href="logo.png" >
+&lt;img src="logo.png" alt="" >&lt;/a>
+&lt;/figure>
+&lt;div class="alert alert-note">
+&lt;div>
+Our team won the challenge!
+&lt;/div>
+&lt;/div>
+&lt;p>As part of a group of four students named &lt;em>Prometheus&lt;/em>, we participated in an
+event organized by our university: University of Granada. We participated in the
+four edition of the so called &lt;em>Tech Challenge&lt;/em>. It was sponsored by the company
+RTI who proposed the topic of the challenge: &lt;em>&amp;ldquo;create a distributed video
+system&amp;rdquo;&lt;/em>. The goal was to simulate a start-up and create from scratch a
+prototype ready to go to the market. We did a market research, study of prices
+and present a full proposal with a working prototype.&lt;/p>
+&lt;figure>
+&lt;a data-fancybox="" href="locaviewer_ui1.png" data-caption="Locaviewer application">
+&lt;img src="locaviewer_ui1.png" alt="" >&lt;/a>
+&lt;figcaption>
+Locaviewer application
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>Our proposal was a video-system for kindergartens. The objective was that
+parents could get a clear image of their baby only. For that, we tracked the
+position of the babies using a Bluetooth wearable device in the wrist. Then,
+using Bluetooth devices in the walls, we could locate the babies. That allow us
+to select the camera that had the best video for that person and stream only
+that video. To send and receive the sensor data and video we use the distributed
+protocol DDS with the implementation of RTI Connext DDS.&lt;/p>
+&lt;figure>
+&lt;a data-fancybox="" href="dds.png" data-caption="DDS design">
+&lt;img src="dds.png" alt="" >&lt;/a>
+&lt;figcaption>
+DDS design
+&lt;/figcaption>
+&lt;/figure></description></item><item><title>Ni no kuni: El mago de las tinieblas</title><link>https://pleonex.dev/project/ninokuni/</link><pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate><guid>https://pleonex.dev/project/ninokuni/</guid><description>
+&lt;figure>
+&lt;a data-fancybox="" href="logo.png" >
+&lt;img src="logo.png" alt="" >&lt;/a>
+&lt;/figure>
+&lt;p>As a member of the GradienWords fan-translation group, I worked in my free time
+as Localization Engineer to translate from Japanese to Spanish the game:
+&lt;em>&amp;ldquo;Ni no kuni: Shikkoku no Madoshi&amp;rdquo;&lt;/em> for Nintendo DS.
+In this altruistic project we did reverse engineering in the game to translate
+all the text and images files as well as edit font files and assembly code.&lt;/p>
+&lt;div class="gallery">
+&lt;a data-fancybox="gallery-screenshots" data-caption="Battle system" href="https://pleonex.dev/img/nino/battle.png">
+&lt;img src="https://pleonex.dev/img/nino/battle.png" alt="">
+&lt;/a>
+&lt;a data-fancybox="gallery-screenshots" data-caption="Dialog" href="https://pleonex.dev/img/nino/dialog.png">
+&lt;img src="https://pleonex.dev/img/nino/dialog.png" alt="">
+&lt;/a>
+&lt;a data-fancybox="gallery-screenshots" data-caption="Map names" href="https://pleonex.dev/img/nino/map.png">
+&lt;img src="https://pleonex.dev/img/nino/map.png" alt="">
+&lt;/a>
+&lt;a data-fancybox="gallery-screenshots" data-caption="Menu" href="https://pleonex.dev/img/nino/menu.png">
+&lt;img src="https://pleonex.dev/img/nino/menu.png" alt="">
+&lt;/a>
+&lt;/div>
+&lt;h3 id="programming">Programming&lt;/h3>
+&lt;ul>
+&lt;li>Create programs to convert text, image, audio and font files in easy formats
+to edit like XML, TXT, PO, PNG, WAV files.&lt;/li>
+&lt;li>Work together with translators and graphic editors to make easier to edit
+files and tools.&lt;/li>
+&lt;li>Edit video game source code in assembly format (ARM) to adapt occidental text
+in the screen. This includes changing: text and image positions, keyboard,
+font char spaces and increasing text limits.&lt;/li>
+&lt;li>Create build automation programs&lt;/li>
+&lt;/ul>
+&lt;h3 id="reverse-engineering">Reverse engineering&lt;/h3>
+&lt;ul>
+&lt;li>Figure out file the binary format of text, script, image, font and audio files.&lt;/li>
+&lt;li>Identify security algorithms (encryption, integrity and authentication) to
+modify DLC and save files.&lt;/li>
+&lt;/ul>
+&lt;h2 id="game-information">Game information&lt;/h2>
+&lt;ul>
+&lt;li>Original title: 二ノ国 漆黒の魔導士 (Ni no Kuni: Shikkoku no Madoshi)&lt;/li>
+&lt;li>Game release year: 2010&lt;/li>
+&lt;li>Platform: Nintendo DS&lt;/li>
+&lt;li>Region: Japan&lt;/li>
+&lt;li>Genre: RPG&lt;/li>
+&lt;/ul>
+&lt;h2 id="fan-translation-information">Fan translation information&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://gradienwords.github.io/ninokuni/info.html">Website&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/GradienWords/Ninokuni">Source code&lt;/a>&lt;/li>
+&lt;li>Translation: Japanese to Spanish&lt;/li>
+&lt;li>Translated game and magic book&lt;/li>
+&lt;li>Duration: 4 years 2011 - 2015&lt;/li>
+&lt;li>Released: v1.1 &lt;em>15 May 2015&lt;/em>&lt;/li>
+&lt;li>Team: Jefelin (Luis Salas), Pleonex, Nino48, Lord Raptor (PaladinKnights) Momin&lt;/li>
+&lt;li>Special thanks: Edueleno, Netty Andrew, Time Master, Ayako&lt;/li>
+&lt;/ul></description></item><item><title>Tinke</title><link>https://pleonex.dev/project/tinke/</link><pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate><guid>https://pleonex.dev/project/tinke/</guid><description>&lt;div class="alert alert-warning">
+&lt;div>
+&lt;p>Deprecated program. Superseded by &lt;a href="https://pleonex.dev/project/yarhl/">Yarhl&lt;/a>&lt;/p>
+&lt;p>Don't judge the code, I wrote the whole program while learning programming 😄&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;p>Tinke is a program to see, convert, and edit the files of NDS games.
+You can see a lot of format files like images, text, sounds, fonts and textures.
+Furthermore it works with plugins made in NET Framework languages
+(C# and VB.NET) so it's so easy to support new formats.&lt;/p>
+&lt;h2 id="features">Features&lt;/h2>
+&lt;ul>
+&lt;li>Show the ROM header with the banner and edit it.&lt;/li>
+&lt;li>Show and convert to common format a lot of files.&lt;/li>
+&lt;li>Edit a lot of image files from BMP files (NCLR, NCGR, NSCR, NCER), audio files from WAV (SWAV, SWAR, STRM) and fonts (NFTR).&lt;/li>
+&lt;li>Hexadecimal visor.&lt;/li>
+&lt;li>Change the content of the files and save the new ROM.&lt;/li>
+&lt;li>Translated to multiple languages.&lt;/li>
+&lt;/ul>
+&lt;div class="gallery">
+&lt;a data-fancybox="gallery-tinke" data-caption="Tinke UI" href="https://pleonex.dev/img/tinke/tinke.png">
+&lt;img src="https://pleonex.dev/img/tinke/tinke.png" alt="">
+&lt;/a>
+&lt;a data-fancybox="gallery-tinke" data-caption="Information of Nintendo DS game header" href="https://pleonex.dev/img/tinke/nds_header.png">
+&lt;img src="https://pleonex.dev/img/tinke/nds_header.png" alt="">
+&lt;/a>
+&lt;a data-fancybox="gallery-tinke" data-caption="View game textures" href="https://pleonex.dev/img/tinke/texture.png">
+&lt;img src="https://pleonex.dev/img/tinke/texture.png" alt="">
+&lt;/a>
+&lt;a data-fancybox="gallery-tinke" data-caption="Specific game support via plugins (Professor Layton)" href="https://pleonex.dev/img/tinke/layton.png">
+&lt;img src="https://pleonex.dev/img/tinke/layton.png" alt="">
+&lt;/a>
+&lt;a data-fancybox="gallery-tinke" data-caption="View game sprites" href="https://pleonex.dev/img/tinke/sprite.png">
+&lt;img src="https://pleonex.dev/img/tinke/sprite.png" alt="">
+&lt;/a>
+&lt;a data-fancybox="gallery-tinke" data-caption="Listen to game music (and edit it)" href="https://pleonex.dev/img/tinke/audio.png">
+&lt;img src="https://pleonex.dev/img/tinke/audio.png" alt="">
+&lt;/a>
+&lt;a data-fancybox="gallery-tinke" data-caption="View and edit game fonts" href="https://pleonex.dev/img/tinke/font.png">
+&lt;img src="https://pleonex.dev/img/tinke/font.png" alt="">
+&lt;/a>
+&lt;/div></description></item><item><title>Yarhl</title><link>https://pleonex.dev/project/yarhl/</link><pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate><guid>https://pleonex.dev/project/yarhl/</guid><description>&lt;p>&lt;img src="https://raw.githubusercontent.com/SceneGate/Yarhl/master/docs/images/logo.png" alt="Yarhl Logo">&lt;/p>
+&lt;p>&lt;strong>Yarhl&lt;/strong> (&lt;em>Yet Another ROM Hacking Library&lt;/em>) is a library for &lt;em>ROM Hacking&lt;/em> and fan-translation projects.
+It provides a virtual file system, file format and format conversion features
+and plugin support. It's built in C# / .NET and works in Windows, Linux and
+Mac OS X.&lt;/p>
+&lt;h2 id="documentation">Documentation&lt;/h2>
+&lt;p>Check our on-line API overview: &lt;a href="https://scenegate.github.io/Yarhl/articles/Mastering-Yarhl.html">Mastering Yarhl&lt;/a>
+and the API documentation &lt;a href="https://scenegate.github.io/Yarhl/api/Yarhl.html">here&lt;/a>.&lt;/p>
+&lt;h2 id="install">Install&lt;/h2>
+&lt;p>Stable releases are available from nuget.org:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.nuget.org/packages/Yarhl">Yarhl&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.nuget.org/packages/Yarhl.Media">Yarhl.Media&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>ROM Hacking Level 02: Imágenes</title><link>https://pleonex.dev/talk/rh02-img/</link><pubDate>Sat, 13 Oct 2018 12:00:00 +0100</pubDate><guid>https://pleonex.dev/talk/rh02-img/</guid><description>&lt;p>Live streaming from Twitch requested by the TraduSquare community.
+This time I talked about the file format of the images, sprites and textures
+in video-games and all the kind of compression and techniques used in the
+Nintendo DS.&lt;/p>
+&lt;div class="responsive-wrap">
+&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQHe3_sdr5P-OCpod4__yACYIdtvTxn-8Af6VOVaoylXhxCa8kTRIRDI441GYc247MNvUiAPRl-XTVR/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
+&lt;/div></description></item><item><title>ROM Hacking Level 01: Textos</title><link>https://pleonex.dev/talk/rh01-text/</link><pubDate>Sat, 09 Jun 2018 12:00:00 +0100</pubDate><guid>https://pleonex.dev/talk/rh01-text/</guid><description>&lt;p>Live streaming from the virtual reality platform &lt;a href="https://altvr.com/">AltspaceVR&lt;/a>.
+The talk explains different topics and concept related to text formats like
+encodings, tables, fonts and compression.&lt;/p>
+&lt;div class="responsive-wrap">
+&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQn2hQWBTgfy_z0oVbfPFrqk9Et2GzZH2n4vdcFpQH4N83hiEYXtm5bIEt5OHgJFy1qRwBjJQTUu9Zw/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
+&lt;/div></description></item><item><title>Destripando juegos: protecciones anti ROM Hacking</title><link>https://pleonex.dev/talk/jasyp18/</link><pubDate>Fri, 13 Apr 2018 18:15:00 +0100</pubDate><guid>https://pleonex.dev/talk/jasyp18/</guid><description>&lt;p>Talk at the JASyP (&lt;em>Jornadas de Anonimato, Seguridad y Privacidad&lt;/em>). Organized
+by the group &lt;em>Interferencias&lt;/em> in the University of Granada. I talked about
+the security mechanisms like encryption that we can find inside of the
+video-games with the goal to obfuscate their files to avoid hacks, mods and
+fan-translations.&lt;/p>
+&lt;div class="responsive-wrap">
+&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS7HprP3NFHWYFv24rmLSHUIduameDSFBIVQFVq29Rbi2GZJGAbKv3eTpBk2fuDsJ_EelwaXVScYS0H/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
+&lt;/div></description></item><item><title>Protocolos del Industrial IoT</title><link>https://pleonex.dev/talk/iiot-dds/</link><pubDate>Fri, 12 May 2017 09:00:00 +0100</pubDate><guid>https://pleonex.dev/talk/iiot-dds/</guid><description>&lt;p>Talk at the IEEE Developer Days organized by the association IEEE Student Branch
+of Elche. I talked about the Industrial Internet of Things (IIoT) and the main
+network protocols and framework in the market. I gave details on how one of
+them, DDS, works with a demo.&lt;/p></description></item></channel></rss>

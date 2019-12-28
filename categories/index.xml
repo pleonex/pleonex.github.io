@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories on Pleotonic Engineering</title>
-    <link>/categories/</link>
-    <description>Recent content in Categories on Pleotonic Engineering</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2019 Benito Palacios Sánchez</copyright>
-    
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories | Pleotonic Engineering</title><link>https://pleonex.dev/categories/</link><atom:link href="https://pleonex.dev/categories/index.xml" rel="self" type="application/rss+xml"/><description>Categories</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copytight © 2019 Benito Palacios Sánchez</copyright><image><url>https://pleonex.dev/img/portrait.jpg</url><title>Categories</title><link>https://pleonex.dev/categories/</link></image></channel></rss>

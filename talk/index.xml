@@ -1,64 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Recent &amp; Upcoming Talks on Pleotonic Engineering</title>
-    <link>/talk/</link>
-    <description>Recent content in Recent &amp; Upcoming Talks on Pleotonic Engineering</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2019 Benito Palacios Sánchez</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Destripando juegos: protecciones anti ROM Hacking</title>
-      <link>/talk/airorom-jasyp18/</link>
-      <pubDate>Mon, 05 Nov 2018 02:00:00 +0100</pubDate>
-      
-      <guid>/talk/airorom-jasyp18/</guid>
-      <description>Talk at the JASyP (Jornadas de Anonimato, Seguridad y Privacidad). Organized by the group Interferencias in the University of Granada. I talked about the security mechanisms like encryption that we can find inside of the video-games with the goal to obfuscate their files to avoid hacks, mods and fan-translations.
- </description>
-    </item>
-    
-    <item>
-      <title>ROM Hacking Level 01: Textos</title>
-      <link>/talk/rh01-texts/</link>
-      <pubDate>Mon, 05 Nov 2018 02:00:00 +0100</pubDate>
-      
-      <guid>/talk/rh01-texts/</guid>
-      <description>Live streaming from the virtual reality platform AltspaceVR. The talk explains different topics and concept related to text formats like encodings, tables, fonts and compression.
- </description>
-    </item>
-    
-    <item>
-      <title>ROM Hacking Level 02: Imágenes</title>
-      <link>/talk/rh02-imgs/</link>
-      <pubDate>Mon, 05 Nov 2018 02:00:00 +0100</pubDate>
-      
-      <guid>/talk/rh02-imgs/</guid>
-      <description>Live streaming from Twitch requested by the TraduSquare community. This time I talked about the file format of the images, sprites and textures in video-games and all the kind of compression and techniques used in the Nintendo DS.
- Following this talk, the next day I did a second live streaming where the people choose three games for Nintendo DS and I had to figure out the image formats:</description>
-    </item>
-    
-    <item>
-      <title>El misterio de las claves de Pokémon Mundo Misterioso</title>
-      <link>/talk/pokemon-mystery-devfestjaen18/</link>
-      <pubDate>Thu, 01 Nov 2018 18:00:00 +0100</pubDate>
-      
-      <guid>/talk/pokemon-mystery-devfestjaen18/</guid>
-      <description>Talk at the DevFest 2018 organized by the GDG Jaén (Google Developer Group). The presentation is about a Twitter thread I did on July. For a week I was figuring out how the game Pokémon Mistery Dungeon Explorers of Sky from Nintendo DS generate and validate a kind of password for rescue missions, special events and object sharing. It almost a study of the assembly code of the game with some notes about the implementation.</description>
-    </item>
-    
-    <item>
-      <title>Protocolos del Industrial IoT</title>
-      <link>/talk/iiot-dds/</link>
-      <pubDate>Thu, 01 Nov 2018 18:00:00 +0100</pubDate>
-      
-      <guid>/talk/iiot-dds/</guid>
-      <description>Talk at the IEEE Developer Days organized by the association IEEE Student Branch of Elche. I talked about the Industrial Internet of Things (IIoT) and the main network protocols and framework in the market. I gave details on how one of them, DDS, works with a demo.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Recent &amp; Upcoming Talks | Pleotonic Engineering</title><link>https://pleonex.dev/talk/</link><atom:link href="https://pleonex.dev/talk/index.xml" rel="self" type="application/rss+xml"/><description>Recent &amp; Upcoming Talks</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copytight © 2019 Benito Palacios Sánchez</copyright><lastBuildDate>Sat, 17 Nov 2018 18:00:00 +0100</lastBuildDate><image><url>https://pleonex.dev/img/portrait.jpg</url><title>Recent &amp; Upcoming Talks</title><link>https://pleonex.dev/talk/</link></image><item><title>El misterio de las claves de Pokémon Mundo Misterioso</title><link>https://pleonex.dev/talk/devfestjaen18/</link><pubDate>Sat, 17 Nov 2018 18:00:00 +0100</pubDate><guid>https://pleonex.dev/talk/devfestjaen18/</guid><description>&lt;p>Talk at the DevFest 2018 organized by the GDG Jaén (&lt;em>Google Developer Group&lt;/em>).
+The presentation is about a Twitter thread I did on July. For a week I was
+figuring out how the game &lt;em>Pokémon Mistery Dungeon Explorers of Sky&lt;/em> from
+Nintendo DS generate and validate a kind of password for rescue missions,
+special events and object sharing. It almost a study of the assembly code
+of the game with some notes about the implementation.&lt;/p>
+&lt;blockquote class="twitter-tweet">&lt;p lang="es" dir="ltr">Hoy me he puesto el reto de averiguar cómo funcionan las contraseñas de Pokémon Mundo Misterioso (NDS). Son un montón de caracteres &amp;quot;aleatorios&amp;quot; que puedes compartir para que otras personas te rescaten desde sus juegos. Voy a ir contando lo que averiguo 🔽 &lt;a href="https://t.co/0ZRz1361Ol">pic.twitter.com/0ZRz1361Ol&lt;/a>&lt;/p>&amp;mdash; Benito 🧐 (@pleonex) &lt;a href="https://twitter.com/pleonex/status/1015933593904992256?ref_src=twsrc%5Etfw">July 8, 2018&lt;/a>&lt;/blockquote>
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;div class="responsive-wrap">
+&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQXQvdFkmg0Qt-4w9XG01Oor1kI9j4-GA_iOlTKy2zudgOa9e-VoR5uBfPLNTY3EzxGjNZcHc4JS16G/embed?start=false&amp;amp;loop=false&amp;amp;delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
+&lt;/div></description></item><item><title>ROM Hacking Level 02: Imágenes</title><link>https://pleonex.dev/talk/rh02-img/</link><pubDate>Sat, 13 Oct 2018 12:00:00 +0100</pubDate><guid>https://pleonex.dev/talk/rh02-img/</guid><description>&lt;p>Live streaming from Twitch requested by the TraduSquare community.
+This time I talked about the file format of the images, sprites and textures
+in video-games and all the kind of compression and techniques used in the
+Nintendo DS.&lt;/p>
+&lt;div class="responsive-wrap">
+&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQHe3_sdr5P-OCpod4__yACYIdtvTxn-8Af6VOVaoylXhxCa8kTRIRDI441GYc247MNvUiAPRl-XTVR/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
+&lt;/div></description></item><item><title>ROM Hacking Level 01: Textos</title><link>https://pleonex.dev/talk/rh01-text/</link><pubDate>Sat, 09 Jun 2018 12:00:00 +0100</pubDate><guid>https://pleonex.dev/talk/rh01-text/</guid><description>&lt;p>Live streaming from the virtual reality platform &lt;a href="https://altvr.com/">AltspaceVR&lt;/a>.
+The talk explains different topics and concept related to text formats like
+encodings, tables, fonts and compression.&lt;/p>
+&lt;div class="responsive-wrap">
+&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQn2hQWBTgfy_z0oVbfPFrqk9Et2GzZH2n4vdcFpQH4N83hiEYXtm5bIEt5OHgJFy1qRwBjJQTUu9Zw/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
+&lt;/div></description></item><item><title>Destripando juegos: protecciones anti ROM Hacking</title><link>https://pleonex.dev/talk/jasyp18/</link><pubDate>Fri, 13 Apr 2018 18:15:00 +0100</pubDate><guid>https://pleonex.dev/talk/jasyp18/</guid><description>&lt;p>Talk at the JASyP (&lt;em>Jornadas de Anonimato, Seguridad y Privacidad&lt;/em>). Organized
+by the group &lt;em>Interferencias&lt;/em> in the University of Granada. I talked about
+the security mechanisms like encryption that we can find inside of the
+video-games with the goal to obfuscate their files to avoid hacks, mods and
+fan-translations.&lt;/p>
+&lt;div class="responsive-wrap">
+&lt;iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS7HprP3NFHWYFv24rmLSHUIduameDSFBIVQFVq29Rbi2GZJGAbKv3eTpBk2fuDsJ_EelwaXVScYS0H/embed?start=false&amp;amp;loop=false&amp;amp;delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">&lt;/iframe>
+&lt;/div></description></item><item><title>Protocolos del Industrial IoT</title><link>https://pleonex.dev/talk/iiot-dds/</link><pubDate>Fri, 12 May 2017 09:00:00 +0100</pubDate><guid>https://pleonex.dev/talk/iiot-dds/</guid><description>&lt;p>Talk at the IEEE Developer Days organized by the association IEEE Student Branch
+of Elche. I talked about the Industrial Internet of Things (IIoT) and the main
+network protocols and framework in the market. I gave details on how one of
+them, DDS, works with a demo.&lt;/p></description></item></channel></rss>

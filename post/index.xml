@@ -11,9 +11,9 @@ Warlord?
 &lt;p>&lt;img src="hxd_search.png" alt="The hexadecimal editor and Tinke">&lt;/p>
 &lt;p>We ran a quick test that this is indeed the file and field that we need to change by editing the name and importing back the file into the game.&lt;/p>
 &lt;p>&lt;img src="edit1.png" alt="Game shows &amp;lsquo;Pleonet&amp;rsquo; instead of Koroku">&lt;/p>
-&lt;p>Voila. As you can see I changed in the file the name &lt;code>Koroku&lt;/code> with &lt;code>Pleonet&lt;/code> and now the latter is showing as the character speaking.&lt;/p>
+&lt;p>Voilà. As you can see I changed in the file the name &lt;code>Koroku&lt;/code> with &lt;code>Pleonet&lt;/code> and now the latter is showing as the character speaking.&lt;/p>
 &lt;h2 id="matching-the-dialog-with-the-name">Matching the dialog with the name&lt;/h2>
-&lt;p>We know the file that contain the list of names. This is useful in case we want to change them. But we don't know who is speaking in the dialog yet. Let's check again the raw dialog text:&lt;/p>
+&lt;p>We know the file that contains the list of names. This is useful in case we want to change them. But we don't know who is speaking in the dialog yet. Let's check again the raw dialog text:&lt;/p>
 &lt;pre>&lt;code class="language-plain">{char:0058}{speaker_color:2}{char_img:0}
 Hey, you!{wait:48}20 You're {name1}, right? {color:49}Aurora{color:51}'s new
 Warlord?

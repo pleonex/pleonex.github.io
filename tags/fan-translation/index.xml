@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>fan-translation | Pleotonic Engineering</title><link>https://pleonex.dev/tags/fan-translation/</link><atom:link href="https://pleonex.dev/tags/fan-translation/index.xml" rel="self" type="application/rss+xml"/><description>fan-translation</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copytight © 2019 Benito Palacios Sánchez</copyright><lastBuildDate>Sun, 04 Nov 2018 02:01:00 +0100</lastBuildDate><image><url>https://pleonex.dev/img/portrait.jpg</url><title>fan-translation</title><link>https://pleonex.dev/tags/fan-translation/</link></image><item><title>Ni no kuni: El mago de las tinieblas</title><link>https://pleonex.dev/project/ninokuni/</link><pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate><guid>https://pleonex.dev/project/ninokuni/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>fan-translation | Pleotonic Engineering</title><link>https://www.pleonex.dev/tags/fan-translation/</link><atom:link href="https://www.pleonex.dev/tags/fan-translation/index.xml" rel="self" type="application/rss+xml"/><description>fan-translation</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copytight © 2020 Benito Palacios Sánchez</copyright><lastBuildDate>Sun, 04 Nov 2018 02:01:00 +0100</lastBuildDate><image><url>https://www.pleonex.dev/img/portrait.jpg</url><title>fan-translation</title><link>https://www.pleonex.dev/tags/fan-translation/</link></image><item><title>Ni no kuni: El mago de las tinieblas</title><link>https://www.pleonex.dev/project/ninokuni/</link><pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate><guid>https://www.pleonex.dev/project/ninokuni/</guid><description>
 &lt;figure>
 &lt;a data-fancybox="" href="logo.png" >
 &lt;img src="logo.png" alt="" >&lt;/a>
@@ -9,17 +9,17 @@ as Localization Engineer to translate from Japanese to Spanish the game:
 In this altruistic project we did reverse engineering in the game to translate
 all the text and images files as well as edit font files and assembly code.&lt;/p>
 &lt;div class="gallery">
-&lt;a data-fancybox="gallery-screenshots" data-caption="Battle system" href="https://pleonex.dev/img/nino/battle.png">
-&lt;img src="https://pleonex.dev/img/nino/battle.png" alt="">
+&lt;a data-fancybox="gallery-screenshots" data-caption="Battle system" href="https://www.pleonex.dev/img/nino/battle.png">
+&lt;img src="https://www.pleonex.dev/img/nino/battle.png" alt="">
 &lt;/a>
-&lt;a data-fancybox="gallery-screenshots" data-caption="Dialog" href="https://pleonex.dev/img/nino/dialog.png">
-&lt;img src="https://pleonex.dev/img/nino/dialog.png" alt="">
+&lt;a data-fancybox="gallery-screenshots" data-caption="Dialog" href="https://www.pleonex.dev/img/nino/dialog.png">
+&lt;img src="https://www.pleonex.dev/img/nino/dialog.png" alt="">
 &lt;/a>
-&lt;a data-fancybox="gallery-screenshots" data-caption="Map names" href="https://pleonex.dev/img/nino/map.png">
-&lt;img src="https://pleonex.dev/img/nino/map.png" alt="">
+&lt;a data-fancybox="gallery-screenshots" data-caption="Map names" href="https://www.pleonex.dev/img/nino/map.png">
+&lt;img src="https://www.pleonex.dev/img/nino/map.png" alt="">
 &lt;/a>
-&lt;a data-fancybox="gallery-screenshots" data-caption="Menu" href="https://pleonex.dev/img/nino/menu.png">
-&lt;img src="https://pleonex.dev/img/nino/menu.png" alt="">
+&lt;a data-fancybox="gallery-screenshots" data-caption="Menu" href="https://www.pleonex.dev/img/nino/menu.png">
+&lt;img src="https://www.pleonex.dev/img/nino/menu.png" alt="">
 &lt;/a>
 &lt;/div>
 &lt;h3 id="programming">Programming&lt;/h3>

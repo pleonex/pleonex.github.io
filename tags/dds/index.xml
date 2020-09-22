@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>dds | Pleotonic Engineering</title><link>https://pleonex.dev/tags/dds/</link><atom:link href="https://pleonex.dev/tags/dds/index.xml" rel="self" type="application/rss+xml"/><description>dds</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copytight © 2019 Benito Palacios Sánchez</copyright><lastBuildDate>Sun, 04 Nov 2018 02:01:00 +0100</lastBuildDate><image><url>https://pleonex.dev/img/portrait.jpg</url><title>dds</title><link>https://pleonex.dev/tags/dds/</link></image><item><title>IV Tech Challenge</title><link>https://pleonex.dev/project/tech-challenge/</link><pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate><guid>https://pleonex.dev/project/tech-challenge/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>dds | Pleotonic Engineering</title><link>https://www.pleonex.dev/tags/dds/</link><atom:link href="https://www.pleonex.dev/tags/dds/index.xml" rel="self" type="application/rss+xml"/><description>dds</description><generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copytight © 2020 Benito Palacios Sánchez</copyright><lastBuildDate>Sun, 04 Nov 2018 02:01:00 +0100</lastBuildDate><image><url>https://www.pleonex.dev/img/portrait.jpg</url><title>dds</title><link>https://www.pleonex.dev/tags/dds/</link></image><item><title>IV Tech Challenge</title><link>https://www.pleonex.dev/project/tech-challenge/</link><pubDate>Sun, 04 Nov 2018 02:01:00 +0100</pubDate><guid>https://www.pleonex.dev/project/tech-challenge/</guid><description>
 &lt;figure>
 &lt;a data-fancybox="" href="logo.png" >
 &lt;img src="logo.png" alt="" >&lt;/a>
@@ -35,7 +35,7 @@ protocol DDS with the implementation of RTI Connext DDS.&lt;/p>
 &lt;figcaption>
 DDS design
 &lt;/figcaption>
-&lt;/figure></description></item><item><title>Protocolos del Industrial IoT</title><link>https://pleonex.dev/talk/iiot-dds/</link><pubDate>Fri, 12 May 2017 09:00:00 +0100</pubDate><guid>https://pleonex.dev/talk/iiot-dds/</guid><description>&lt;p>Talk at the IEEE Developer Days organized by the association IEEE Student Branch
+&lt;/figure></description></item><item><title>Protocolos del Industrial IoT</title><link>https://www.pleonex.dev/talk/iiot-dds/</link><pubDate>Fri, 12 May 2017 09:00:00 +0100</pubDate><guid>https://www.pleonex.dev/talk/iiot-dds/</guid><description>&lt;p>Talk at the IEEE Developer Days organized by the association IEEE Student Branch
 of Elche. I talked about the Industrial Internet of Things (IIoT) and the main
 network protocols and framework in the market. I gave details on how one of
 them, DDS, works with a demo.&lt;/p></description></item></channel></rss>

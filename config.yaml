@@ -24,7 +24,7 @@ outputs:
 enableEmoji: true
 
 params:
-  background: "images/site/bg-moiry-river.jpg"
+  background: "images/site/bg-moiry-river.webp"
   logo:
     main: /images/site/main-logo.png
     inverted: /images/site/inverted-logo.png

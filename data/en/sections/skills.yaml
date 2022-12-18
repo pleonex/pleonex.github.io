@@ -1,0 +1,19 @@
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavBar: true
+  hideTitle: false
+
+skills:
+  - name: "C# / .NET development"
+    logo: ""
+    summary: ""
+    url: ""
+
+  - name: "Localization engineering"
+  - name: "Low-level development"
+  - name: "Reverse engineering"
+  - name: "Networking and protocol analysis"
+  - name: "DDS - Distributed system"

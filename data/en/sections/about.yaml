@@ -1,0 +1,39 @@
+section:
+  name: "About"
+  id: about
+  enable: true
+  weight: 1
+  showOnNavBar: true
+  template: sections/about.html
+
+designation: "Software Engineer"
+company:
+  name: "Swiss Timing LTD"
+  url: "https://www.swisstiming.com"
+
+summary: >
+  I originally studied _Electrical Engineering_ in Spain but quickly move into hardware
+  and software development.
+  I self-studied programming, .NET/C# specifically, and built several open-source
+  projects and frameworks for game reverse engineering (ROM Hacking) and fan-translations.
+  I also have a deep understanding of networks and protocols, especially on DDS,
+  a network distributed message protocol.
+
+  Now I am living in Switzerland, where I spent my free time hiking and traveling.
+
+socialLinks:
+  - name: Email
+    icons: "fas fa-envelope"
+    url: "me@pleonex.dev"
+
+  - name: GitHub
+    icon: "fab fa-github"
+    url: "https://www.github.com/pleonex"
+
+  - name: Mastodon
+    icon: "fab fa-mastodon"
+    url: "https://fosstodon.org/@pleonex"
+
+  - name: Linkedin
+    icon: "fab fa-linkedin"
+    url: "https://www.linkedin.com/in/pleonex"

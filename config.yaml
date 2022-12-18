@@ -1,0 +1,35 @@
+baseURL: http://pleonex.dev/
+
+languageCode: en-us
+title: "Pleotonic Engineering"
+theme: "toha"
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+
+markup:
+  tableOfContent:
+    startLevel: 2
+    endLevel: 6
+    ordered: false
+
+outputs:
+  home:
+    - HTML
+    - JSON
+    - RSS
+
+enableEmoji: true
+
+params:
+  gitRepo: "https://github.com/pleonex/pleonex.github.io"
+  gitBranch: "main"
+
+  enableBlogPost: true
+  enableTOC: true
+  showFlags: true
+
+  newsletter:
+    enable: false

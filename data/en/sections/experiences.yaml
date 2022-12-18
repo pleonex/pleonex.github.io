@@ -1,0 +1,55 @@
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 3
+  showOnNavbar: true
+
+experiences:
+  - company:
+      name: "Swiss Timing LTD"
+      url: "https://www.swisstiming.com"
+      location: "Corgémont, Switzerland"
+      overview: >
+        World leading sports timekeepers. It builds, deploys and operates sport
+        timekeeping hardware and software and TV graphic production for major sport events
+        like Olympic Games."
+    positions:
+      - designation: "Technical Lead - Senior Software Engineer"
+        start: "Mar 2022"
+        responsibilities:
+          - Design...
+      - designation: "Software Engineer"
+        start: "Feb 2019"
+        end: "Feb 2022"
+        responsibilities:
+          - "Develop..."
+
+  - company:
+      name: "Real-Time Innovations, Inc."
+      url: "https://www.rti.com"
+      location: "Granada, Spain"
+      overview: >
+        Software framework company for autonomous systems.
+        It builds _RTI Connext DDS_, an implementation of the standard DDS network protocol.
+    positions:
+      - designation: "Software Engineer"
+        start: "Oct 2015"
+        end: "Jan 2019"
+        responsibilities:
+          - DevOps...
+          - Support...
+
+  - company:
+      name: "Real-Time Innovations, Inc."
+      url: "https://www.rti.com"
+      location: "Granada, Spain"
+      overview: >
+        Software framework company for autonomous systems.
+        It builds _RTI Connext DDS_, an implementation of the standard DDS network protocol.
+    positions:
+      - designation: "Internship"
+        start: "Mar 2015"
+        end: "Sept 2015"
+        responsibilities:
+          - Help...

@@ -1,0 +1,21 @@
+name: "Benito Palacios Sanchez"
+nickname: "Benito"
+
+greeting: "Without any further delay, "
+image: "images/author/palben.jpg"
+
+contactInfo:
+  email: "me@pleonex.dev"
+  github: "pleonex"
+  linkedin: "pleonex"
+  mastodon:
+    icon: mastodon
+    url: "https://fosstodon.org/@pleonex"
+    text: "pleonex"
+
+summary:
+  - I am a developer
+  - I love reverse engineering
+  - I like to play with hardware
+  - I help in fan-translation projects
+  - I contribute to open-source projects

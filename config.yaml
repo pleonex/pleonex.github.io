@@ -24,12 +24,40 @@ outputs:
 enableEmoji: true
 
 params:
+  background: "images/site/bg-moiry-river.jpg"
+  logo:
+    main: /images/site/main-logo.png
+    inverted: /images/site/inverted-logo.png
+    favicon: /images/site/favicon.png
+
   gitRepo: "https://github.com/pleonex/pleonex.github.io"
   gitBranch: "main"
 
-  enableBlogPost: true
-  enableTOC: true
-  showFlags: true
+  features:
+    portfolio:
+      enable: true
+    blog:
+      enable: false
+      shareButtons:
+        email: true
+        mastodon: true
+    notes:
+      enable: false # GitBook
+    comment:
+      enable: false
+    analytics:
+      enable: false
+    support:
+      enable: false
 
-  newsletter:
-    enable: false
+  enableTOC: true
+  enableTags: true
+
+  footer:
+    newsletter:
+      enable: false
+
+  darkMode:
+    enable: true
+    provider: darkreader
+    default: system

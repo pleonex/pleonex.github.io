@@ -1,0 +1,38 @@
+# section information
+section:
+  name: Education
+  id: education
+  template: sections/education.html
+  enable: true
+  weight: 4
+  showOnNavbar: true
+
+degrees:
+- name: B.Sc. in Electrical Engineering - Telematics (networks) specialty
+  icon: fa-graduation-cap
+  timeframe: 2011-2015
+  institution:
+    name: University of Granada
+    url: "https://grados.ugr.es/telecomunicacion/"
+  grade:
+    scale: "Grade"
+    achieved: "8.0"
+    outOf: 10
+  takenCourses:
+    showGrades: false
+    collapseAfter: 4
+    courses:
+    - name: Telematics systems
+    - name: Communication Networks and Infrastructures
+    - name: Communication Networks Security
+    - name: Micro-controller programming
+  publications:
+  - title: "Data Protection Mechanisms in Video Games (Spanish)"
+    url: "files/Mecanismos-proteccion-datos-videojuegos.pdf"
+  - title: "Data Protection Mechanisms in Video Games - Presentation (Spanish)"
+    url: "files/Mecanismos-proteccion-datos-videojuegos-presentacion.pdf"
+  extracurricularActivities:
+  - "Founder member of 'IEEE Student Branch of Granada'. Participant in several local and international events."
+  - "Participate in the programming challenge IEEEXtreme. Team winner at national level for edition 9.0."
+  - "Team winner of the 'IV ETSIIT Technical Challenge' with the project 'Multi-Agent Video Distributed System for Nursery Schools'. We use DDS technology to distribute video over Internet."
+  - Several talks about reverse engineering and programming

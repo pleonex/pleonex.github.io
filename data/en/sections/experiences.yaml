@@ -13,43 +13,64 @@ experiences:
       overview: >
         World leading sports timekeepers. It builds, deploys and operates sport
         timekeeping hardware and software and TV graphic production for major sport events
-        like Olympic Games."
+        like Olympic Games.
     positions:
-      - designation: "Technical Lead - Senior Software Engineer"
+      - designation: "Tech lead - Senior software engineer"
         start: "Mar 2022"
         responsibilities:
-          - Design...
-      - designation: "Software Engineer"
+          - Design software components for TV production.
+          - Technical leader of a team working on several projects
+          - "Establish quality standards: contribution (PR, issues), git branching, testing (manual and automatic) and releasing (deterministic, traceability, support)"
+      - designation: "Software engineer"
         start: "Feb 2019"
         end: "Feb 2022"
         responsibilities:
-          - "Develop..."
+          - Develop modular framework on latest technologies for sport software.
+          - Develop APIs and software router for distributed system.
+          - Development of framework for monitoring using Prometheus and Grafana.
+          - Design and develop automatic deployment framework using PowerShell DSC.
+          - Migration and support of projects to .NET Core and Linux.
+          - Design and deploy networks and systems on sport events.
+          - TV graphic operator in FINA World Championship 2019 - Guangzhou
+          - On-site technical support and initial infrastructure setup for new distributed system during Beijing Winter Olympic Games 2022.
 
   - company:
       name: "Real-Time Innovations, Inc."
       url: "https://www.rti.com"
       location: "Granada, Spain"
       overview: >
-        Software framework company for autonomous systems.
-        It builds _RTI Connext DDS_, an implementation of the standard DDS network protocol.
+        Expertise in RTI Connext DDDS: a technology for the Industrial Internet of Things (IIoT). I had responsabilities as a developer and in the support team.
     positions:
-      - designation: "Software Engineer"
-        start: "Oct 2015"
+      - designation: "Software engineer"
+        start: "Mar 2017"
         end: "Jan 2019"
         responsibilities:
-          - DevOps...
-          - Support...
+          - Author of the first draft of [OMG IDL to C# mapping specification](https://www.omg.org/spec/IDL4-CSHARP/1.0/).
+          - "Developer of a new build system: CMake, Gradle, Python and Jenkins. Support for over 100 platforms and multiple languages."
+          - Lead developer of the [C# API for RTI Connector](https://github.com/rticommunity/rticonnextdds-connector-cs).
+          - Author of debugging tool [RTI LogParser](https://github.com/rticommunity/rticonnextdds-logparser).
+          - Point of contact for C# language.
+          - On-site customer visits to provide design knowledge and support.
+      - designation: "Software support engineer"
+        start: "Oct 2015"
+        end: "Feb 2017"
+        responsibilities:
+          - Answer of technical questions and remote troubleshooting on distributed systems using DDS.
+          - Support on different languages (C, C++, Java, C#) and on different OS (Linux, VxWorks, Integrity, Windows)
+          - "Troubleshooting of network protocols via Wireshark: IP, UDP, TCP, DDS."
+          - On-site customer visits to provide design knowledge and support.
+          - Handle of high critical escalated cases.
+          - Build and release engineer for patch releases.
 
   - company:
       name: "Real-Time Innovations, Inc."
       url: "https://www.rti.com"
       location: "Granada, Spain"
-      overview: >
-        Software framework company for autonomous systems.
-        It builds _RTI Connext DDS_, an implementation of the standard DDS network protocol.
+      overview: ""
     positions:
       - designation: "Internship"
         start: "Mar 2015"
         end: "Sept 2015"
         responsibilities:
-          - Help...
+          - Development of examples for the C++11 API of RTI Connext DDS.
+          - Quality assurance of new releases.

@@ -6,10 +6,10 @@ section:
   showOnNavBar: true
   template: sections/about.html
 
-designation: "Software Engineer"
-company:
-  name: "Swiss Timing LTD"
-  url: "https://www.swisstiming.com"
+designation: "Senior Software Engineer"
+# company:
+#   name: ""
+#   url: ""
 
 summary: >
   I originally studied _Electrical Engineering_ in Spain but quickly move into hardware

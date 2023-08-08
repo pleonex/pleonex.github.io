@@ -11,12 +11,13 @@ experiences:
       url: "https://www.swisstiming.com"
       location: "Corgémont, Switzerland"
       overview: >
-        World leading sports timekeepers. It builds, deploys and operates sport
+        World leading sports timekeepers. They build, deploy and operate sport
         timekeeping hardware and software and TV graphic production for major sport events
         like Olympic Games.
     positions:
       - designation: "Tech lead - Senior software engineer"
         start: "Mar 2022"
+        end: "Jun 2022"
         responsibilities:
           - Design software components for TV production.
           - Technical leader of a team working on several projects

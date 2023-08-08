@@ -11,7 +11,7 @@ contactInfo:
   mastodon:
     icon: mastodon
     url: "https://fosstodon.org/@pleonex"
-    text: "pleonex"
+    text: "@pleonex@fosstodon.org"
 
 summary:
   - I am a developer

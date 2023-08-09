@@ -1,0 +1,11 @@
+section:
+  name: Recent posts
+  id: recent-posts
+  enable: true
+  weight: 7
+  showOnNavbar: true
+  hideTitle: false
+  numShow: 3
+  showMoreButton: true
+
+# no additional configuration is required

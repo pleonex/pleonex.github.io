@@ -37,7 +37,7 @@ params:
     portfolio:
       enable: true
     blog:
-      enable: false
+      enable: true
       shareButtons:
         email: true
         mastodon: true
@@ -50,8 +50,12 @@ params:
     support:
       enable: false
 
-  enableTOC: true
-  enableTags: true
+    toc:
+      enable: true
+
+    tags:
+      enable: true
+      on_card: true # tags in post cards
 
   footer:
     newsletter:

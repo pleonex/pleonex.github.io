@@ -1,5 +1,5 @@
 ---
-title: "Logo de Nintendo en GBA y NDS"
+title: "(Spanish) Logo de Nintendo en GBA y NDS"
 date: 2013-08-19T03:19:00+02:00
 hero: images/pleonex_logo.png
 description: >
@@ -7,7 +7,7 @@ description: >
 theme: Toha
 menu:
   sidebar:
-    name: "Nintendo logo"
+    name: "(Spanish) Nintendo logo"
     identifier: nds-gba-logo
     parent: romhacking
     weight: 120

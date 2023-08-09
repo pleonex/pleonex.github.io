@@ -6,20 +6,44 @@ section:
   showOnNavBar: true
   template: sections/about.html
 
-designation: "Senior Software Engineer"
+designation: "Senior software engineer"
 # company:
 #   name: ""
 #   url: ""
 
 summary: >
-  I originally studied _Electrical Engineering_ in Spain but quickly move into hardware
-  and software development.
-  I self-studied programming, .NET/C# specifically, and built several open-source
-  projects and frameworks for game reverse engineering (ROM Hacking) and fan-translations.
-  I also have a deep understanding of networks and protocols, especially on DDS,
-  a network distributed message protocol.
+  Born in Granada, Spain, I found my passion about software development and
+  start self-learning programming.
+  After completing a bachelor in _Electrical Engineering_, I jumped into
+  software development positions in Granada and then I moved to Switzerland
+  where I currently live.
 
-  Now I am living in Switzerland, where I spent my free time hiking and traveling.
+
+  During my **career** I've worked in projects related to:
+  **distributed systems** with pub/sub protocol **DDS**;
+  sport timing and **live TV production**;
+  DevOps projects;
+  **backend frameworks**;
+  and **collaboration workflows**, quality assurance and release management.
+
+
+  Apart from software development, I was able to grow on **operational skills** by
+  having the role of senior technical operator of timing and scoring systems in
+  the **Olympic Games at Tokyo 2020 and Winter Olympic Games Beijing 2022**.
+  I did setup of network infrastructure, hardware and software and operation of software
+  during sport competitions. I was the last level of support engineer helping
+  teams to troubleshoot network protocols and software issues in critical moments.
+
+
+  As a **hobby** I maintain several **open-source projects** and frameworks for
+  game **reverse engineering** (ROM hacking) and fan-translations.
+  I study and analyze low-level details of game consoles and debug and write
+  assembly code (ARM). I help teams to translate video-games acting in a role
+  usually known as **_Localization Engineer_**. I make programs to edit proprietary
+  formats of text, image, font and audio files.
+
+
+  I also love to give technical talks at conferences and online.
 
 socialLinks:
   - name: Email

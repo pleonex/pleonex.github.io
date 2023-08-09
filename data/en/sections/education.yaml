@@ -17,7 +17,7 @@ degrees:
   grade:
     scale: "Grade"
     achieved: "8.0"
-    outOf: 10
+    outOf: "10"
   takenCourses:
     showGrades: false
     collapseAfter: 4

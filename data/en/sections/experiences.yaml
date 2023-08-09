@@ -9,59 +9,85 @@ experiences:
   - company:
       name: "Swiss Timing LTD"
       url: "https://www.swisstiming.com"
-      location: "Corgémont, Switzerland"
+      location: "Corgémont, Bern, Switzerland"
       overview: >
         World leading sports timekeepers. They build, deploy and operate sport
         timekeeping hardware and software and TV graphic production for major sport events
         like Olympic Games.
     positions:
-      - designation: "Tech lead - Senior software engineer"
-        start: "Mar 2022"
-        end: "Jun 2022"
+      - designation: "Senior software engineer - Tech lead"
+        start: "January 2022"
+        end: "June 2023"
         responsibilities:
-          - Design software components for TV production.
-          - Technical leader of a team working on several projects
-          - "Establish quality standards: contribution (PR, issues), git branching, testing (manual and automatic) and releasing (deterministic, traceability, support)"
+          - "On-site senior technical support engineer at Beijing Winter Olympic Games 2022."
+          - "Technical lead of a team working on .NET/C# desktop and cloud software projects."
+          - "Design and lead implementation of software components for TV live production."
+          - "Implementation of network protocols based on serial port, TCP and UDP."
+          - >
+            Design, implement and troubleshooting (Wireshark) of distributed 
+             with the DDS protocol.
+          - >
+            Establish quality standards and collaboration workflow: contribution
+            (pull requests, issues), git workflow, testing (manual and automatic)
+            and releasing (deterministic, traceability, support).
+          - "Plan and refine backlog and sprint with scrum master."
+          - "Mentoring of software developers."
       - designation: "Software engineer"
-        start: "Feb 2019"
-        end: "Feb 2022"
+        start: "February 2019"
+        end: "January 2022"
         responsibilities:
-          - Develop modular framework on latest technologies for sport software.
-          - Develop APIs and software router for distributed system.
-          - Development of framework for monitoring using Prometheus and Grafana.
-          - Design and develop automatic deployment framework using PowerShell DSC.
-          - Migration and support of projects to .NET Core and Linux.
-          - Design and deploy networks and systems on sport events.
-          - TV graphic operator in FINA World Championship 2019 - Guangzhou
-          - On-site technical support and initial infrastructure setup for new distributed system during Beijing Winter Olympic Games 2022.
+          - "Develop framework components for sport software."
+          - >
+            Develop and troubleshoot (Wireshark) software for distributed system
+            with the DDS protocol.
+          - "Development of monitoring system with Prometheus and Grafana."
+          - "Design and develop deployment framework with PowerShell DSC."
+          - "Define testing and release process of software projects."
+          - "Design and deploy network and software infrastructure in sport events."
+          - "TV graphic operator in FINA World Championship 2019 - Guangzhou."
+          - >
+            On-site developer and timing & scoring lead operator at
+            Summer Paralympic Games Tokyo 2020 for Boccia.
 
   - company:
       name: "Real-Time Innovations, Inc."
       url: "https://www.rti.com"
-      location: "Granada, Spain"
+      location: "Granada, Andalusia, Spain"
       overview: >
-        Expertise in RTI Connext DDDS: a technology for the Industrial Internet of Things (IIoT). I had responsabilities as a developer and in the support team.
+        Expertise in RTI Connext DDDS: a technology for the Industrial Internet
+        of Things (IIoT).
     positions:
       - designation: "Software engineer"
-        start: "Mar 2017"
-        end: "Jan 2019"
+        start: "March 2017"
+        end: "January 2019"
         responsibilities:
-          - Author of the first draft of [OMG IDL to C# mapping specification](https://www.omg.org/spec/IDL4-CSHARP/1.0/).
-          - "Developer of a new build system: CMake, Gradle, Python and Jenkins. Support for over 100 platforms and multiple languages."
-          - Lead developer of the [C# API for RTI Connector](https://github.com/rticommunity/rticonnextdds-connector-cs).
-          - Author of debugging tool [RTI LogParser](https://github.com/rticommunity/rticonnextdds-logparser).
-          - Point of contact for C# language.
-          - On-site customer visits to provide design knowledge and support.
+          - >
+            Author of the first draft of
+            [OMG IDL to C# mapping specification](https://www.omg.org/spec/IDL4-CSHARP/1.0/).
+          - >
+            DevOps projects using CMake, Gradle, Python and Jenkins.
+            Support for over 100 platforms, several Unix OS and multiple languages.
+          - >
+            Lead developer of the
+            [C# API for RTI Connector](https://github.com/rticommunity/rticonnextdds-connector-cs).
+          - >
+            Author of the debugging tool
+            [RTI LogParser](https://github.com/rticommunity/rticonnextdds-logparser).
+          - Point of contact for internal support in C#/.NET technologies.
       - designation: "Software support engineer"
-        start: "Oct 2015"
-        end: "Feb 2017"
+        start: "October 2015"
+        end: "February 2017"
         responsibilities:
-          - Answer of technical questions and remote troubleshooting on distributed systems using DDS.
-          - Support on different languages (C, C++, Java, C#) and on different OS (Linux, VxWorks, Integrity, Windows)
+          - >
+            Answer of technical questions and remote troubleshooting on
+            distributed systems using DDS.
+          - >
+            Support on different languages (C, C++, Java, C#) and on different
+            OS (Linux, VxWorks, Integrity, Windows)
           - "Troubleshooting of network protocols via Wireshark: IP, UDP, TCP, DDS."
-          - On-site customer visits to provide design knowledge and support.
-          - Handle of high critical escalated cases.
-          - Build and release engineer for patch releases.
+          - "Customer on-site visits with the consultant team to provide design knowledge and support."
+          - "Handle of critical escalated cases."
+          - "Build and release engineer for patch releases."
 
   - company:
       name: "Real-Time Innovations, Inc."
@@ -70,8 +96,8 @@ experiences:
       overview: ""
     positions:
       - designation: "Internship"
-        start: "Mar 2015"
-        end: "Sept 2015"
+        start: "March 2015"
+        end: "August 2015"
         responsibilities:
           - Development of examples for the C++11 API of RTI Connext DDS.
           - Quality assurance of new releases.

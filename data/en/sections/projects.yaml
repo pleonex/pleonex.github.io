@@ -1,0 +1,225 @@
+section:
+  name: Projects
+  id: projects
+  enable: true
+  weight: 5
+  showOnNavbar: true
+
+buttons:
+- name: All
+  filter: "all"
+- name: Professional
+  filter: "professional"
+- name: Reverse engineering
+  filter: "reverse-engineering"
+- name: Fan translations
+  filter: fan-translation
+- name: Others
+  filter: "general"
+
+projects:
+- name: "Yarhl"
+  logo: /images/sections/projects/yarhl.png
+  role: Author
+  timeline: "Sep 2013 - Present"
+  repo: https://github.com/SceneGate/Yarhl
+  summary: >
+    Framework to **implement and convert file formats**.
+    It provides a virtual file system, format conversion APIs,
+    full featured binary IO and plugin support to support common formats.
+  tags: ["hobby", "reverse-engineering", "csharp", "scenegate"]
+
+- name: Ekona
+  logo: /images/sections/projects/scenegate.png
+  role: Author
+  timeline: "Mar 2022 - Present"
+  repo: https://github.com/SceneGate/Ekona
+  summary: >
+    [Website](https://scenegate.github.io/Ekona/)
+    Library part of the SceneGate framework that provides support for
+    Nintendo DS and DSi file formats.
+  tags: ["hobby", "reverse-engineering", "csharp", "scenegate"]
+
+- name: Lemon
+  logo: /images/sections/projects/scenegate.png
+  role: Author
+  timeline: "Feb 2019 - Present"
+  repo: https://github.com/SceneGate/Lemon
+  summary: >
+    Library part of the SceneGate framework that provides support for
+    Nintendo 3DS file formats.
+  tags: ["hobby", "reverse-engineering", "csharp", "scenegate"]
+
+- name: Texim
+  # logo:
+  role: Author
+  timeline: "Apr 2021 - Present"
+  repo: https://github.com/SceneGate/Texim
+  summary: >
+     Proof-of-Concept of an extensible image file formats API for SceneGate.
+  tags: ["hobby", "reverse-engineering", "csharp", "scenegate"]
+
+- name: Nitrap
+  #logo:
+  role: Author
+  timeline: "Aug 2018 - Present"
+  repo: https://github.com/pleonex/Nitrap
+  summary: >
+    Nintendo DS anti-piracy and flashcard kernel research.
+  tags: ["hobby", "reverse-engineering", "assembly", "research"]
+
+- name: Tinke
+  logo: /images/sections/projects/tinke.png
+  role: Author
+  timeline: "Dec 2010 - Mar 2016"
+  repo: https://github.com/pleonex/tinke
+  summary: >
+    Program to see, convert, and edit the files of Nintendo DS games.
+    It supports images, texts, music, fonts and textures.
+  tags: ["hobby", "reverse-engineering", "csharp"]
+
+- name: ImaPo
+  # logo:
+  role: Author
+  timeline: "Mar 2022"
+  repo: https://github.com/pleonex/ImaPo
+  summary: >
+    Tool to help to translate images with GNU gettext PO files in Weblate.
+  tags: ["hobby", "csharp", "fan-translation"]
+
+- name: Ninokuni game modding
+  #logo:
+  role: "Localization Engineer"
+  timeline: "Oct 2011 - May 2015"
+  repo: https://github.com/pleonex/Ninokuni
+  summary: >
+    Modding tools and assembly fixes for the Japanese to Spanish fan-translation
+    of the game _"Ni no kuni: Shikkoku no Madoshi"_ for Nintendo DS.
+  tags: ["hobby", "reverse-engineering", "csharp", "fan-translation"]
+
+- name: '"Attack of the Friday Monsters" game modding'
+  #logo:
+  role: "Localization Engineer"
+  timeline: "Sep 2019 - Dec 2020"
+  repo: https://github.com/pleonex/AttackFridayMonsters
+  summary: >
+    Modding tools for the English to Spanish fan-translation of the game
+    _"Attack of the Friday Monsters"_ for Nintendo 3DS.
+  tags: ["hobby", "reverse-engineering", "csharp", "fan-translation"]
+
+- name: LayTea
+  logo: /images/sections/projects/laytea.png
+  role: "Localization Engineer"
+  timeline: "Dec 2020 - Jun 2021"
+  repo: https://github.com/pleonex/LayTea
+  summary: >
+    Modding tools to translate _"Professor Layton"_ games for Nintendo DS.
+  tags: ["hobby", "reverse-engineering", "csharp", "fan-translation"]
+
+- name: Ambition Conquest
+  #logo:
+  role: "Localization Engineer"
+  timeline: "June 2015 - Present"
+  url: https://tradusquare.es/proyectos/pokemon-conquest/
+  summary: >
+    (Private code until translation release)
+    Modding tools for the English to Spanish fan-translation of the game
+    _"Pokémon Conquest"_ for Nintendo DS.
+  tags: ["hobby", "reverse-engineering", "csharp", "fan-translation"]
+
+- name: PleOps.Cake
+  logo: /images/sections/projects/pleops-cake.png
+  role: Author
+  timeline: "Sep 2020 - Present"
+  repo: https://github.com/pleonex/PleOps.Cake
+  summary: >
+    DevOps pipeline (build and release) based on Cake for C# projects in GitHub.
+  tags: ["hobby", "general", "csharp", "devops"]
+
+- name: LibreGlucoseWatcher
+  logo: /images/sections/projects/libreglucosewatcher.png
+  role: Author
+  timeline: "July 2023 - Present"
+  repo: https://github.com/pleonex/LibreGlucoseWatcher
+  summary: >
+    Prototype apps to monitor glucose levels of **FreeStyle Libre**
+    sensors from **Garmin sport watches**, **desktop** and phones.
+  tags: ["hobby", "general", "csharp", "mobile", "diabetes"]
+
+- name: xdelta-sharp
+  #logo:
+  role: Author
+  timeline: "May 2015 - Dec 2021"
+  repo: https://github.com/pleonex/xdelta-sharp
+  summary: >
+    Decompressor for binary delta encoding VCDIFF (RFC-3284).
+    xdelta3 compatible
+  tags: ["hobby", "general", "csharp"]
+
+- name: ThirdLicense
+  #logo:
+  role: Author
+  timeline: "May 2020"
+  repo: https://github.com/pleonex/ThirdLicense
+  summary: >
+    .NET tool to generate third-party notice files from all
+    the transitive dependencies of a .NET project.
+  tags: ["hobby", "general", "csharp"]
+
+- name: Autocomplete XML Atom plugin
+  #logo:
+  role: Author
+  timeline: "Aug 2015 - Dec 2018"
+  repo: https://github.com/pleonex/atom-autocomplete-xml
+  summary: >
+    Atom IDE plugin to have autocompletion of XML files from XSD schemas.
+  tags: ["hobby", "general", "coffeescript"]
+
+- name: Arduimmer
+  #logo:
+  role: Author
+  timeline: "Nov 2013 - May 2015"
+  repo: https://github.com/pleonex/Arduimmer
+  summary: "ICSP Arduino programmer for PIC and ZigBee chips."
+  tags: ["hobby", "general", "csharp", "c++", "arduino", "hardware"]
+
+- name: "NitroDebugger"
+  logo: /images/sections/projects/nitrodebugger.png
+  role: Author
+  timeline: "Mar 2014 - Sep 2016"
+  repo: https://github.com/pleonex/NitroDebugger
+  summary: "Remote GDB protocol client and UI for ARM"
+  tags: [ "hobby", "general", "csharp" ]
+
+- name: "RTI Connector C#"
+  logo: /images/sections/projects/rti-connector.png
+  role: Author
+  timeline: "Dec 2017 - Jan 2019"
+  repo: https://github.com/rticommunity/rticonnextdds-connector-cs
+  summary: >
+    C# API for RTI Connector to communicate applications via DDS pub/sub.
+  tags: ["professional", "csharp", "dds"]
+
+- name: "RTI LogParser"
+  logo: /images/sections/projects/rti-logparser.png
+  role: Author
+  timeline: "Jun 2016 - Feb 2018"
+  repo: https://github.com/rticommunity/rticonnextdds-logparser
+  summary: >
+    Enhances RTI Connext DDS log messages to troubleshoot network protocol issues.
+  tags: ["professional", "python"]
+
+- name: LocaViewer
+  logo: /images/sections/projects/locaviewer.png
+  timeline: "Dec 2014"
+  repo: https://github.com/Prometheus-ETSIIT/locaviewer
+  summary: >
+    University challenge project - Multi-agent distributed video system using DDS.
+  tags: ["academic", "java", "dds"]
+
+- name: eaTopic
+  # logo:
+  timeline: "Jan 2015"
+  repo: https://github.com/pleonex/eaTopic
+  summary: Implementation of a custom pub/sub protocol.
+  tags: ["academic", "csharp"]

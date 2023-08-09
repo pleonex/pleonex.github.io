@@ -33,6 +33,9 @@ params:
   gitRepo: "https://github.com/pleonex/pleonex.github.io"
   gitBranch: "main"
 
+  topNavbar:
+    maxVisibleSections: 6
+
   features:
     portfolio:
       enable: true

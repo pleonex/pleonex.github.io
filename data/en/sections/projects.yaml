@@ -133,6 +133,7 @@ projects:
   timeline: "Sep 2020 - Present"
   repo: https://github.com/pleonex/PleOps.Cake
   summary: >
+    [Website](https://www.pleonex.dev/PleOps.Cake/)
     DevOps pipeline (build and release) based on Cake for C# projects in GitHub.
   tags: ["hobby", "general", "csharp", "devops"]
 
